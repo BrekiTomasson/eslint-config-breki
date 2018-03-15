@@ -17,6 +17,7 @@
     "ava",
     "node",
     "ocd",
+    "import",
     "promise",
     "react",
     "security",
@@ -504,15 +505,13 @@
     "node/no-extraneous-import": [
       "error",
       {
-        "allowModules": [
-        ]
+        "allowModules": []
       }
     ],
     "node/no-extraneous-require": [
       "error",
       {
-        "allowModules": [
-        ]
+        "allowModules": []
       }
     ],
     "node/no-missing-require": "error",
