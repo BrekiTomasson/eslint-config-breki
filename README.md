@@ -8,4 +8,6 @@ only took you two or three hours to put it together. Knowing that, wouldn't it m
 the "putting it together" department to ensure that you have the best possible experience in the hundreds of hours
 you're expected to sleep there?
 
-Another
+My goal with this repo was originally just a place to store my various rulesets for various linters and formatters.
+Over time, it grew into something more than that. It is now growing into a fully featured eslint ruleset runner which
+I can just `require()` into my other projects and have them taken care of for me.
