@@ -4,7 +4,9 @@
   "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
   "main": "index.js",
   "scripts": {
-    "patch": "npm version patch && npm publish && git push --follow-tags"
+    "patch": "npm version patch && npm publish && git push --follow-tags",
+    "lint": "eslint",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "eslint-plugin-array-func": "~3.0.0",
     "eslint-plugin-ava": "~4.5.1",
     "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "~21.15.0",
     "eslint-plugin-node": "~6.0.1",
     "eslint-plugin-ocd": "~1.0.6",
     "eslint-plugin-promise": "~3.7.0",
@@ -33,7 +36,9 @@
     "eslint-plugin-security": "~1.4.0",
     "eslint-plugin-standard": "~3.0.1",
     "eslint-plugin-unicorn": "~4.0.2",
-    "standard-engine": "~8.0.1",
-    "unibeautify": "^0.10.1"
+    "standard-engine": "~8.0.1"
+  },
+  "devDependencies": {
+    "jest": "~22.4.3"
   }
 }

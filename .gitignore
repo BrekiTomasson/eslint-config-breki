@@ -1,3 +1,4 @@
-node_modules
 *.log
-
+.sonarlint
+node_modules
+.DS_Store
