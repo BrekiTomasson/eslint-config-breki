@@ -1,7 +1,6 @@
 const options = require('../options')
 
 describe('options test suite', () => {
-
   test('exports an object', () => {
     expect(options)
       .toBeDefined()
