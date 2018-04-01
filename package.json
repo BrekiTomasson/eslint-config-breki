@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-breki",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
     "license": "MIT",
     "scripts": {
@@ -48,41 +48,67 @@
         "eslint": "^4.18.0"
     },
     "jest": {
-      "projects": [
-          {
-              "displayName": "Eslint",
-              "runner": "jest-runner-eslint",
-              "testMatch": ["<rootDir>/**/*.js"]
-          }, {
-              "automock": false,
-              "browser": false,
-              "cache": true,
-              "cacheDirectory": "<rootDir>/test/tmp",
-              "clearMocks": true,
-              "coveragePathIgnorePatterns": ["<rootDir>/node_modules/"],
-              "displayName": "Code tests",
-              "forceCoverageMatch": ["**/*.test.js"],
-              "moduleDirectories": ["node_modules"],
-              "moduleFileExtensions": ["js", "json", "jsx", "node"],
-              "moduleNameMapper": {},
-              "modulePathIgnorePatterns": [],
-              "resetMocks": false,
-              "resetModules": false,
-              "restoreMocks": false,
-              "runner": "jest-runner",
-              "setupFiles": ["<rootDir>/node_modules/regenerator-runtime/runtime.js"],
-              "snapshotSerializers": [],
-              "testEnvironment": "jest-environment-jsdom",
-              "testEnvironmentOptions": {},
-              "testLocationInResults": false,
-              "testMatch": ["**/*.test.js"],
-              "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
-              "testRunner": "<rootDir>/node_modules/jest-jasmine2/build/index.js",
-              "transform": { "^.+\\.jsx?$": "./node_modules/babel-jest/build/index.js" },
-              "transformIgnorePatterns": ["<rootDir>/node_modules/"],
-              "verbose": true,
-              "watchPathIgnorePatterns": ["<rootDir>/node_modules/"]
-          }
-      ]
-  }
+        "projects": [
+            {
+                "displayName": "Eslint",
+                "runner": "jest-runner-eslint",
+                "testMatch": [
+                    "<rootDir>/**/*.js"
+                ]
+            },
+            {
+                "automock": false,
+                "browser": false,
+                "cache": true,
+                "cacheDirectory": "<rootDir>/test/tmp",
+                "clearMocks": true,
+                "coveragePathIgnorePatterns": [
+                    "<rootDir>/node_modules/"
+                ],
+                "displayName": "Code tests",
+                "forceCoverageMatch": [
+                    "**/*.test.js"
+                ],
+                "moduleDirectories": [
+                    "node_modules"
+                ],
+                "moduleFileExtensions": [
+                    "js",
+                    "json",
+                    "jsx",
+                    "node"
+                ],
+                "moduleNameMapper": {},
+                "modulePathIgnorePatterns": [],
+                "resetMocks": false,
+                "resetModules": false,
+                "restoreMocks": false,
+                "runner": "jest-runner",
+                "setupFiles": [
+                    "<rootDir>/node_modules/regenerator-runtime/runtime.js"
+                ],
+                "snapshotSerializers": [],
+                "testEnvironment": "jest-environment-jsdom",
+                "testEnvironmentOptions": {},
+                "testLocationInResults": false,
+                "testMatch": [
+                    "**/*.test.js"
+                ],
+                "testPathIgnorePatterns": [
+                    "<rootDir>/node_modules/"
+                ],
+                "testRunner": "<rootDir>/node_modules/jest-jasmine2/build/index.js",
+                "transform": {
+                    "^.+\\.jsx?$": "./node_modules/babel-jest/build/index.js"
+                },
+                "transformIgnorePatterns": [
+                    "<rootDir>/node_modules/"
+                ],
+                "verbose": true,
+                "watchPathIgnorePatterns": [
+                    "<rootDir>/node_modules/"
+                ]
+            }
+        ]
+    }
 }
