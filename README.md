@@ -1,5 +1,8 @@
 # `eslint-config-breki`
 
+[![Build 
+Status](https://travis-ci.org/BrekiTomasson/breki-eslint-config.svg?branch=master)](https://travis-ci.org/BrekiTomasson/breki-eslint-config)
+
 We spend more time reading our code than we do writing it.
 
 A lot of people I talk to don't understand the point of that sentence, so I usually fall back on the following
@@ -15,6 +18,6 @@ I can just `npm install --save-dev` into my other projects and have them taken c
 
 ## Obligatory `todo` section
 
-- [ ] Still getting an error message by eslint when extending this...
-- [ ] Get rid of `validate-commit-msg`.
-- [ ] ... or actually find a use for it.
+- [x] Still getting an error message by eslint when extending this...
+- [x] Get rid of `validate-commit-msg`.
+- [ ] Work out if Semantic Versioning library is worth it.
