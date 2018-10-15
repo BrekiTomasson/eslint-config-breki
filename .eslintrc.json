@@ -295,7 +295,7 @@
     "newline-per-chained-call": [
       "warn",
       {
-        "ignoreChainWithDepth": 1
+        "ignoreChainWithDepth": 4
       }
     ],
     "no-alert": 2,
@@ -345,8 +345,14 @@
     "no-lone-blocks": 2,
     "no-lonely-if": 2,
     "no-loop-func": 2,
-    "no-magic-numbers": ["error", {
-        "ignore": [-1, 0, 1],
+    "no-magic-numbers": [
+      "error",
+      {
+        "ignore": [
+          -1,
+          0,
+          1
+        ],
         "ignoreArrayIndexes": true
       }
     ],
@@ -548,7 +554,7 @@
         }
       }
     ],
-    "padded-blocks": 1,
+    "padded-blocks": 0,
     "padding-line-between-statements": [
       "error",
       {
@@ -690,8 +696,13 @@
     "security/detect-possible-timing-attacks": 1,
     "security/detect-pseudoRandomBytes": 1,
     "security/detect-unsafe-regex": 1,
-    "semi": [2, "never"],
-    "semi-spacing": ["error", {
+    "semi": [
+      2,
+      "never"
+    ],
+    "semi-spacing": [
+      "error",
+      {
         "after": true,
         "before": false
       }
@@ -727,21 +738,41 @@
     "space-in-parens": 2,
     "space-infix-ops": 2,
     "space-unary-ops": [
-      2, {
+      2,
+      {
         "nonwords": false,
         "words": true
       }
     ],
-    "spaced-comment": ["error", "always", {
-      "block": {
-        "balanced": true,
-        "exceptions": ["*"],
-        "markers": ["*package", "!", ",", ":", "::", "flow-include"]
-      },
-      "line": {
-        "markers": ["*package", "!", "/", ",", "="]
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "block": {
+          "balanced": true,
+          "exceptions": [
+            "*"
+          ],
+          "markers": [
+            "*package",
+            "!",
+            ",",
+            ":",
+            "::",
+            "flow-include"
+          ]
+        },
+        "line": {
+          "markers": [
+            "*package",
+            "!",
+            "/",
+            ",",
+            "="
+          ]
+        }
       }
-    }],
+    ],
     "standard/array-bracket-even-spacing": 2,
     "standard/computed-property-even-spacing": 2,
     "standard/no-callback-literal": 2,

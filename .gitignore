@@ -1,5 +1,4 @@
 *.log
-.sonarlint
 node_modules
 .DS_Store
 tmp

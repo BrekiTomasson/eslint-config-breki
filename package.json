@@ -1,53 +1,28 @@
 {
-  "name": "eslint-config-breki",
-  "version": "1.0.7",
-  "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
-  "license": "MIT",
-  "scripts": {
-    "patch": "npm version patch && npm publish && git push --follow-tags",
-    "test": "jest",
-    "commitmsg": "validate-commit-msg",
-    "codacy": "cat ./coverage/lcov.info | codacy-coverage",
-    "prepush": "npm run test",
-    "travis-deploy-once": "travis-deploy-once"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BrekiTomasson/breki-eslint-config.git"
-  },
-  "keywords": [
-    "eslint",
-    "prettier",
-    "standard"
-  ],
   "author": "Breki Tomasson <breki.tomasson@gmail.com>",
   "bugs": {
-    "url": "https://github.com/BrekiTomasson/breki-eslint-config/issues"
+    "url": "https://github.com/BrekiTomasson/eslint-config-breki/issues"
   },
-  "homepage": "https://github.com/BrekiTomasson/breki-eslint-config#readme",
   "dependencies": {
+    "eslint": "~5.7.0",
     "eslint-plugin-array-func": "~3.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.15.3",
-    "eslint-plugin-node": "~6.0.1",
-    "eslint-plugin-ocd": "~1.0.6",
-    "eslint-plugin-promise": "~3.8.0",
-    "eslint-plugin-react": "~7.8.2",
+    "eslint-plugin-node": "~7.0.1",
+    "eslint-plugin-ocd": "~1.1.0",
+    "eslint-plugin-promise": "~4.0.1",
+    "eslint-plugin-react": "~7.11.1",
     "eslint-plugin-security": "~1.4.0",
-    "eslint-plugin-standard": "~3.1.0",
-    "eslint-plugin-unicorn": "^4.0.3",
-    "regenerator-runtime": "~0.11.1",
-    "standard-engine": "~9.0.0"
+    "eslint-plugin-standard": "~4.0.0",
+    "eslint-plugin-unicorn": "^6.0.1",
+    "jest": "^23.6.0",
+    "jest-runner-eslint": "~0.6.0",
+    "regenerator-runtime": "~0.12.1",
+    "standard-engine": "~10.0.0",
+    "travis-deploy-once": "^5.0.9"
   },
-  "devDependencies": {
-    "eslint": "~4.19.1",
-    "jest": "^23.0.0",
-    "jest-runner-eslint": "~0.5.0",
-    "travis-deploy-once": "^5.0.0"
-  },
-  "peerDependencies": {
-    "eslint": "^4.18.0"
-  },
+  "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
+  "homepage": "https://github.com/BrekiTomasson/eslint-config-breki#readme",
   "jest": {
     "projects": [
       {
@@ -100,5 +75,25 @@
         ]
       }
     ]
-  }
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "standard"
+  ],
+  "license": "MIT",
+  "name": "eslint-config-breki",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrekiTomasson/eslint-config-breki.git"
+  },
+  "scripts": {
+    "codacy": "cat ./coverage/lcov.info | codacy-coverage",
+    "commitmsg": "validate-commit-msg",
+    "patch": "npm version patch && npm publish && git push --follow-tags",
+    "prepush": "npm run test",
+    "test": "jest",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "version": "1.0.7"
 }

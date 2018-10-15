@@ -12,8 +12,9 @@ My goal with this repo was originally just a place to store my various rulesets 
 Over time, it grew into something more - and less - than that. This is now a full `eslint` configuration that I can
 import into other projects to help me out.
 
-> _And somehow, the folder has blossomed into 114 megabytes - when counting the `node_modules` folder. Feels a little
-overkill when you consider the rules-file itself is just 25 kilobytes.... Aaaaanyway._
+> _And somehow, the folder has blossomed into 114 megabytes - when counting the `node_modules` folder.
+> Feels a little overkill when you consider the rules-file itself is just 25 kilobytes.... Aaaaanyway,
+> such is the way of the black hole that is the `node_modules` folder...
 
 ## Obligatory @todo section
 
