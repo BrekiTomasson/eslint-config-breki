@@ -3,6 +3,7 @@
     "browser": true,
     "commonjs": true,
     "jest": true,
+    "es6": true,
     "jquery": true,
     "node": true
   },
@@ -12,7 +13,7 @@
     "window": false
   },
   "parserOptions": {
-    "emcaVersion": 9,
+    "emcaVersion": 6,
     "ecmaFeatures": {
       "arrowFunctions": true,
       "binaryLiterals": true,
