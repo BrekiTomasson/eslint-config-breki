@@ -86,8 +86,8 @@
   },
   "keywords": [
     "eslint",
-    "prettier",
-    "standard"
+    "standard",
+    "breki"
   ],
   "license": "MIT",
   "name": "eslint-config-breki",
@@ -96,8 +96,6 @@
     "url": "https://github.com/BrekiTomasson/eslint-config-breki.git"
   },
   "scripts": {
-    "codacy": "cat ./coverage/lcov.info | codacy-coverage",
-    "commitmsg": "validate-commit-msg",
     "patch": "npm version patch && npm publish && git push --follow-tags",
     "prepush": "npm run test",
     "test": "jest",
