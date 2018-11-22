@@ -33,7 +33,6 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-ocd": "^1.1.0",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "7.11.1",
     "eslint-plugin-security": "~1.4.0",
     "eslint-plugin-standard": "~4.0.0",
     "eslint-plugin-unicorn": "^6.0.1",
@@ -42,26 +41,27 @@
     "standard-engine": "~10.0.0"
   },
   "devDependencies": {
-    "eslint": "~5.6.1",
     "jest": "^23.6.0",
     "jest-runner-eslint": "~0.6.0",
-    "travis-deploy-once": "^5.0.9"
+    "travis-deploy-once": "^5.0.9",
+    "vue-jest": "^3.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^5.6.0",
   },
   "jest": {
     "projects": [
       {
         "displayName": "Linting Test",
         "runner": "jest-runner-eslint",
-        "testMatch": [
-          "<rootDir>/**/*.{js,jsx}"
-        ]
+        "testMatch": ["<rootDir>/**/*.{js,vue}"]
       },
       {
         "cache": true,
         "cacheDirectory": "<rootDir>/test/tmp",
         "collectCoverage": true,
         "collectCoverageFrom": [
-          "**/*.{js,jsx}",
+          "**/*.{js,vue}",
           "!**/node_modules/**",
           "!<rootDir>/test/coverage/**"
         ],
@@ -83,16 +83,16 @@
           }
         },
         "displayName": "Code tests",
-        "forceCoverageMatch": [
-          "<rootDir>/test/*.test.js"
-        ],
+        "moduleFileExtensions": ["js", "json", "vue"],
+        "forceCoverageMatch": ["<rootDir>/test/*.test.js"],
         "runner": "jest-runner",
         "testLocationInResults": false,
         "testMatch": [
           "<rootDir>/test/*.test.js"
         ],
         "transform": {
-          "^.+\\.jsx?$": "./node_modules/babel-jest/build/index.js"
+          "^.+\\.js$": "babel-jest""
+          "^.+\\.vue$": "vue-jest""
         },
         "watchPathIgnorePatterns": [
           "<rootDir>/node_modules/"

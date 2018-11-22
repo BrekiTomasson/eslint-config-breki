@@ -24,7 +24,6 @@
       "forOf": true,
       "globalReturn": false,
       "impliedStrict": true,
-      "jsx": true,
       "modules": true,
       "objectLiteralComputedProperties": true,
       "objectLiteralDuplicateProperties": true,
@@ -46,7 +45,6 @@
     "node",
     "ocd",
     "promise",
-    "react",
     "security",
     "standard",
     "unicorn",
@@ -54,15 +52,13 @@
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:@vue/essential",
-    "plugin:react/recommended"
+    "plugin:@vue/essential"
   ],
   "overrides": [
     {
       "files": [
         "webpack.*.js",
-        "test/**/*.js",
-        "*.jsx"
+        "test/**/*.js"
       ],
       "rules": {
         "node/no-unpublished-import": "off",
@@ -504,7 +500,7 @@
         "tryExtensions": [
           ".js",
           ".json",
-          ".jsx",
+          ".vue",
           ".node"
         ]
       }
@@ -515,7 +511,7 @@
         "tryExtensions": [
           ".js",
           ".json",
-          ".jsx",
+          ".vue",
           ".node"
         ]
       }
