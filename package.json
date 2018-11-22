@@ -47,7 +47,7 @@
     "vue-jest": "^3.0.0"
   },
   "peerDependencies": {
-    "eslint": "^5.6.0",
+    "eslint": "^5.6.0"
   },
   "jest": {
     "projects": [
@@ -91,8 +91,8 @@
           "<rootDir>/test/*.test.js"
         ],
         "transform": {
-          "^.+\\.js$": "babel-jest""
-          "^.+\\.vue$": "vue-jest""
+          "^.+\\.js$": "babel-jest",
+          "^.+\\.vue$": "vue-jest"
         },
         "watchPathIgnorePatterns": [
           "<rootDir>/node_modules/"

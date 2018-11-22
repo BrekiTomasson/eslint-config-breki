@@ -1,4 +1,3 @@
 const opts = require('./options.js')
 
-require('standard-engine')
-  .cli(opts)
+require('standard-engine').cli(opts)
