@@ -2,8 +2,8 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "es6": true,
     "jest": true,
+    "es6": true,
     "jquery": true,
     "node": true
   },
@@ -13,7 +13,7 @@
     "window": false
   },
   "parserOptions": {
-    "emcaVersion": 9,
+    "emcaVersion": 6,
     "ecmaFeatures": {
       "arrowFunctions": true,
       "binaryLiterals": true,
@@ -40,7 +40,12 @@
   },
   "plugins": [
     "array-func",
+    "babel",
+    "html",
+    "es",
     "import",
+    "json",
+    "filenames",
     "jest",
     "node",
     "ocd",
@@ -48,11 +53,15 @@
     "security",
     "standard",
     "unicorn",
-    "vue"
+    "vue",
+    "you-dont-need-lodash-underscore",
+    "you-dont-need-momentjs"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:@vue/essential"
+    "plugin:@vue/essential",
+    "plugin:you-dont-need-momentjs/recommended",
+    "plugin:you-dont-need-lodash-underscore/compatible"
   ],
   "overrides": [
     {
@@ -66,7 +75,18 @@
       }
     }
   ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/base",
+  ],
   "rules": {
+    "babel/new-cap": 1,
+    "babel/no-invalid-this": 1,
+    "babel/object-curly-spacing": 1,
+    "babel/quotes": 1,
+    "babel/semi": 1,
+    "babel/no-unused-expressions": 1,
+    "babel/valid-typeof": 1,
     "jest/no-disabled-tests": 1,
     "jest/no-focused-tests": 2,
     "jest/no-identical-title": 2,
@@ -90,6 +110,17 @@
         "setWithoutGet": true
       }
     ],
+    "array-bracket-newline": [
+      "warn",
+      {
+        "minItems": 4,
+        "multiline": true
+      }
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
     "array-func/from-map": 2,
     "array-func/no-unnecessary-this-arg": 2,
     "array-func/prefer-array-from": 2,
@@ -99,7 +130,10 @@
     ],
     "arrow-parens": [
       2,
-      "as-needed"
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
     ],
     "arrow-spacing": [
       "error",
@@ -124,7 +158,10 @@
         "properties": "never"
       }
     ],
-    "comma-dangle": 2,
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ],
     "comma-spacing": [
       "error",
       {
@@ -136,7 +173,12 @@
       "error",
       "last"
     ],
-    "complexity": 0,
+    "complexity": [
+      "error",
+      {
+        "max": 3
+      }
+    ],
     "computed-property-spacing": [
       2,
       "never"
@@ -295,7 +337,7 @@
     "newline-per-chained-call": [
       "warn",
       {
-        "ignoreChainWithDepth": 1
+        "ignoreChainWithDepth": 4
       }
     ],
     "no-alert": 2,
@@ -313,9 +355,14 @@
     "no-debugger": 2,
     "no-delete-var": 2,
     "no-div-regex": 2,
+    "no-await-in-loop": 2,
     "no-dupe-args": 2,
     "no-dupe-class-members": 2,
     "no-dupe-keys": 2,
+    "no-duplicate-imports": 2,
+    "no-extra-semi": 2,
+    "no-invalid-this": 2,
+    "require-await": 2,
     "no-duplicate-case": 2,
     "no-else-return": 2,
     "no-empty": 2,
@@ -534,6 +581,12 @@
         "allowMultiplePropertiesPerLine": true
       }
     ],
+    "object-shorthand": [
+      "warn",
+      "always"
+    ],
+    "ocd/sort-import-declaration-specifiers": 2,
+    "ocd/sort-import-declarations": 2,
     "ocd/sort-variable-declarator-properties": 2,
     "one-var": [
       "error",
@@ -552,10 +605,7 @@
         }
       }
     ],
-    "padded-blocks": [
-      1,
-      "never"
-    ],
+    "padded-blocks": [1, "never"],
     "padding-line-between-statements": [
       "error",
       {
@@ -623,9 +673,13 @@
     "security/detect-possible-timing-attacks": 1,
     "security/detect-pseudoRandomBytes": 1,
     "security/detect-unsafe-regex": 1,
-    "semi": [
-      2,
-      "never"
+    "semi": [2, "never"],
+    "semi-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false
+      }
     ],
     "semi-spacing": [
       "error",
@@ -693,6 +747,7 @@
       2,
       "always"
     ],
+    "standard/no-callback-literal": 2,
     "strict": [
       "error",
       "global"
@@ -719,9 +774,10 @@
     "unicorn/no-hex-escape": 2,
     "unicorn/no-new-buffer": 2,
     "unicorn/no-process-exit": 2,
-    "unicorn/no-unsafe-regex": "off",
+    "unicorn/no-unsafe-regex": 2,
     "unicorn/number-literal-case": 2,
     "unicorn/prefer-add-event-listener": 2,
+    "unicorn/prefer-exponentiation-operator":  2,
     "unicorn/prefer-spread": 2,
     "unicorn/prefer-starts-ends-with": 2,
     "unicorn/prefer-type-error": 2,
@@ -753,6 +809,9 @@
     "yoda": [
       "error",
       "never"
-    ]
+    ],
+    "filenames/match-exported":  2,
+    "filenames/match-regex":  0,
+    "filenames/no-index":  0
   }
 }

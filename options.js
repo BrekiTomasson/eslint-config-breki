@@ -7,7 +7,10 @@ module.exports = {
   cmd: 'lint',
   cwd: path.resolve(__dirname, '.'),
   eslint: eslint,
-  eslintConfig: {configFile: path.join(__dirname, 'eslintrc.json')},
+  eslintConfig: {
+    configFile: path.join(__dirname, 'eslintrc.json')
+    extensions: ['js', 'vue']
+  },
   homepage: pkg.homepage,
   tagline: 'Honesty in small things is not a small thing.',
   version: pkg.version
