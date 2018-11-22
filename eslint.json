@@ -24,7 +24,6 @@
       "forOf": true,
       "globalReturn": false,
       "impliedStrict": true,
-      "jsx": true,
       "modules": true,
       "objectLiteralComputedProperties": true,
       "objectLiteralDuplicateProperties": true,
@@ -60,9 +59,25 @@
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:vue/base",
+    "plugin:@vue/essential",
     "plugin:you-dont-need-momentjs/recommended",
     "plugin:you-dont-need-lodash-underscore/compatible"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "webpack.*.js",
+        "test/**/*.js"
+      ],
+      "rules": {
+        "node/no-unpublished-import": "off",
+        "node/no-unpublished-require": "off"
+      }
+    }
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/base",
   ],
   "rules": {
     "babel/new-cap": 1,
@@ -278,7 +293,7 @@
     "lines-around-comment": [
       "error",
       {
-        "afterBlockComment": true,
+        "afterBlockComment": false,
         "afterLineComment": true,
         "allowArrayEnd": true,
         "allowArrayStart": true,
@@ -415,7 +430,7 @@
       }
     ],
     "no-mixed-spaces-and-tabs": 2,
-    "no-multi-spaces": 2,
+    "no-multi-spaces": 0,
     "no-multi-str": 2,
     "no-multiple-empty-lines": 2,
     "no-native-reassign": 2,
@@ -433,7 +448,6 @@
     "no-octal-escape": 2,
     "no-path-concat": 2,
     "no-plusplus": 0,
-    "no-process-env": 2,
     "no-process-exit": 2,
     "no-proto": 2,
     "no-prototype-builtins": 2,
@@ -533,6 +547,7 @@
         "tryExtensions": [
           ".js",
           ".json",
+          ".vue",
           ".node"
         ]
       }
@@ -543,11 +558,11 @@
         "tryExtensions": [
           ".js",
           ".json",
+          ".vue",
           ".node"
         ]
       }
     ],
-    "node/no-unsupported-features": 2,
     "node/process-exit-as-throw": 2,
     "node/shebang": 2,
     "nonblock-statement-body-position": [
@@ -590,7 +605,7 @@
         }
       }
     ],
-    "padded-blocks": 0,
+    "padded-blocks": [1, "never"],
     "padding-line-between-statements": [
       "error",
       {
@@ -658,9 +673,13 @@
     "security/detect-possible-timing-attacks": 1,
     "security/detect-pseudoRandomBytes": 1,
     "security/detect-unsafe-regex": 1,
-    "semi": [
-      2,
-      "never"
+    "semi": [2, "never"],
+    "semi-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false
+      }
     ],
     "semi-spacing": [
       "error",
@@ -669,20 +688,6 @@
         "before": false
       }
     ],
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": true,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": [
-          "none",
-          "single",
-          "multiple",
-          "all"
-        ]
-      }
-    ],
-    "sort-keys": 2,
     "sort-vars": [
       "error",
       {
@@ -734,6 +739,13 @@
           ]
         }
       }
+    ],
+    "standard/array-bracket-even-spacing": 2,
+    "standard/computed-property-even-spacing": 2,
+    "standard/no-callback-literal": 2,
+    "standard/object-curly-even-spacing": [
+      2,
+      "always"
     ],
     "standard/no-callback-literal": 2,
     "strict": [
@@ -799,7 +811,7 @@
       "never"
     ],
     "filenames/match-exported":  2,
-"filenames/match-regex":  0,
+    "filenames/match-regex":  0,
     "filenames/no-index":  0
   }
 }

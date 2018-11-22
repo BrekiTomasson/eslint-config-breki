@@ -1,9 +1,51 @@
 {
+  "name": "eslint-config-breki",
+  "version": "1.0.9",
+  "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
+  "license": "MIT",
+  "scripts": {
+    "patch": "npm version patch && npm publish && git push --follow-tags",
+    "test": "jest",
+    "commitmsg": "validate-commit-msg",
+    "codacy": "cat ./coverage/lcov.info | codacy-coverage",
+    "prepush": "npm run test",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrekiTomasson/breki-eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "standard"
+  ],
   "author": "Breki Tomasson <breki.tomasson@gmail.com>",
   "bugs": {
     "url": "https://github.com/BrekiTomasson/eslint-config-breki/issues"
   },
   "dependencies": {
+    "@vue/eslint-plugin": "^4.2.0",
+    "eslint-plugin-array-func": "~3.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.27.2",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-ocd": "^1.1.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-security": "~1.4.0",
+    "eslint-plugin-standard": "~4.0.0",
+    "eslint-plugin-unicorn": "^6.0.1",
+    "eslint-plugin-vue": "^4.7.1",
+    "regenerator-runtime": "~0.12.1",
+    "standard-engine": "~10.0.0"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jest-runner-eslint": "~0.6.0",
+    "travis-deploy-once": "^5.0.9",
+    "vue-jest": "^3.0.0"
+  },
+  "peerDependencies": {
     "eslint": "~5.7.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-array-func": "~3.0.0",
@@ -36,16 +78,14 @@
       {
         "displayName": "Linting Test",
         "runner": "jest-runner-eslint",
-        "testMatch": [
-          "<rootDir>/**/*.{js,jsx}"
-        ]
+        "testMatch": ["<rootDir>/**/*.{js,vue}"]
       },
       {
         "cache": true,
         "cacheDirectory": "<rootDir>/test/tmp",
         "collectCoverage": true,
         "collectCoverageFrom": [
-          "**/*.{js,jsx}",
+          "**/*.{js,vue}",
           "!**/node_modules/**",
           "!<rootDir>/test/coverage/**"
         ],
@@ -67,16 +107,16 @@
           }
         },
         "displayName": "Code tests",
-        "forceCoverageMatch": [
-          "<rootDir>/test/*.test.js"
-        ],
+        "moduleFileExtensions": ["js", "json", "vue"],
+        "forceCoverageMatch": ["<rootDir>/test/*.test.js"],
         "runner": "jest-runner",
         "testLocationInResults": false,
         "testMatch": [
           "<rootDir>/test/*.test.js"
         ],
         "transform": {
-          "^.+\\.jsx?$": "./node_modules/babel-jest/build/index.js"
+          "^.+\\.js$": "babel-jest",
+          "^.+\\.vue$": "vue-jest"
         },
         "watchPathIgnorePatterns": [
           "<rootDir>/node_modules/"
@@ -84,12 +124,17 @@
       }
     ]
   },
+  "bundleDependencies": [
+    "@vue/eslint-plugin",
+    "es-css-modules"
+  ],
   "keywords": [
     "eslint",
     "standard",
     "breki"
   ],
   "license": "MIT",
+  "version": "1.0.9",
   "name": "eslint-config-breki",
   "repository": {
     "type": "git",
@@ -101,5 +146,4 @@
     "test": "jest",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "version": "1.0.16"
 }

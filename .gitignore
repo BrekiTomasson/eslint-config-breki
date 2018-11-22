@@ -1,5 +1,9 @@
 .idea
 *.log
+vendor/**
 node_modules
 .DS_Store
-tmp
+*.tmp
+test/tmp
+.idea/**
+
