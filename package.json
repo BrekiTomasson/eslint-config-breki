@@ -26,9 +26,10 @@
   },
   "homepage": "https://github.com/BrekiTomasson/breki-eslint-config#readme",
   "dependencies": {
+    "@vue/eslint-plugin": "^4.2.0",
     "eslint-plugin-array-func": "~3.0.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-jest": "^21.27.2",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-ocd": "^1.1.0",
     "eslint-plugin-promise": "^4.0.1",
@@ -98,5 +99,9 @@
         ]
       }
     ]
-  }
+  },
+  "bundleDependencies": [
+    "@vue/eslint-plugin",
+    "es-css-modules"
+  ]
 }
