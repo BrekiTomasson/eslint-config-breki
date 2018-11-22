@@ -1,5 +1,17 @@
 # Changelog for `eslint-config-breki`
 
+## v1.0.10 - November 22, 2018
+
+```
+- [Added]   : eslint-plugin-babel 5.3.0
+- [Added]   : eslint-plugin-filenames 1.3.2
+- [Added]   : eslint-plugin-html 5.0.0
+- [Added]   : eslint-plugin-json 1.2.1
+- [Added]   : eslint-plugin-you-dont-need-lodash-underscore 6.4.0
+- [Added]   : eslint-plugin-you-dont-need-momentjs 1.4.0
+- [Changed] : Renamed file back to .eslintrc]
+```
+
 ## v1.0.9 - November 22, 2018
 
 ```

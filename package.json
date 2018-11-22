@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "patch": "npm version patch && npm publish && git push --follow-tags",
+    "lint": "eslint \"./**/*.js\"",
     "test": "jest",
     "commitmsg": "validate-commit-msg",
     "codacy": "cat ./coverage/lcov.info | codacy-coverage",
@@ -27,8 +28,12 @@
   "dependencies": {
     "@vue/eslint-plugin": "^4.2.0",
     "eslint-plugin-array-func": "~3.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-html": "^5.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.27.2",
+    "eslint-plugin-json": "^1.2.1",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-ocd": "^1.1.0",
     "eslint-plugin-promise": "^4.0.1",
@@ -36,6 +41,8 @@
     "eslint-plugin-standard": "~4.0.0",
     "eslint-plugin-unicorn": "^6.0.1",
     "eslint-plugin-vue": "^4.7.1",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0",
+    "eslint-plugin-you-dont-need-momentjs": "^1.4.0",
     "regenerator-runtime": "~0.12.1",
     "standard-engine": "~10.0.0"
   },
@@ -71,14 +78,15 @@
     "standard-engine": "~10.0.0",
     "travis-deploy-once": "^5.0.9"
   },
-  "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
   "homepage": "https://github.com/BrekiTomasson/eslint-config-breki#readme",
   "jest": {
     "projects": [
       {
         "displayName": "Linting Test",
         "runner": "jest-runner-eslint",
-        "testMatch": ["<rootDir>/**/*.{js,vue}"]
+        "testMatch": [
+          "<rootDir>/**/*.{js,vue}"
+        ]
       },
       {
         "cache": true,
@@ -107,8 +115,14 @@
           }
         },
         "displayName": "Code tests",
-        "moduleFileExtensions": ["js", "json", "vue"],
-        "forceCoverageMatch": ["<rootDir>/test/*.test.js"],
+        "moduleFileExtensions": [
+          "js",
+          "json",
+          "vue"
+        ],
+        "forceCoverageMatch": [
+          "<rootDir>/test/*.test.js"
+        ],
         "runner": "jest-runner",
         "testLocationInResults": false,
         "testMatch": [
@@ -126,24 +140,12 @@
   },
   "bundleDependencies": [
     "@vue/eslint-plugin",
-    "es-css-modules"
-  ],
-  "keywords": [
-    "eslint",
-    "standard",
-    "breki"
-  ],
-  "license": "MIT",
-  "version": "1.0.9",
-  "name": "eslint-config-breki",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BrekiTomasson/eslint-config-breki.git"
-  },
-  "scripts": {
-    "patch": "npm version patch && npm publish && git push --follow-tags",
-    "prepush": "npm run test",
-    "test": "jest",
-    "travis-deploy-once": "travis-deploy-once"
-  },
+    "es-css-modules",
+    "eslint-plugin-babel",
+    "eslint-plugin-html",
+    "eslint-plugin-json",
+    "eslint-plugin-filenames",
+    "eslint-plugin-you-dont-need-lodash-underscore",
+    "eslint-plugin-you-dont-need-momentjs"
+  ]
 }

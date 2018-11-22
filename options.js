@@ -5,10 +5,10 @@ const pkg = require('./package.json')
 module.exports = {
   bugs: pkg.bugs.url,
   cmd: 'lint',
-  cwd: path.resolve(__dirname, '.'),
+  cwd: '',
   eslint: eslint,
   eslintConfig: {
-    configFile: path.join(__dirname, 'eslintrc.json')
+    configFile: path.join(__dirname, '.eslintrc'),
     extensions: ['js', 'vue']
   },
   homepage: pkg.homepage,

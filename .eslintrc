@@ -75,10 +75,6 @@
       }
     }
   ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:vue/base",
-  ],
   "rules": {
     "babel/new-cap": 1,
     "babel/no-invalid-this": 1,
@@ -681,13 +677,6 @@
         "before": false
       }
     ],
-    "semi-spacing": [
-      "error",
-      {
-        "after": true,
-        "before": false
-      }
-    ],
     "sort-vars": [
       "error",
       {
@@ -743,25 +732,13 @@
     "standard/array-bracket-even-spacing": 2,
     "standard/computed-property-even-spacing": 2,
     "standard/no-callback-literal": 2,
-    "standard/object-curly-even-spacing": [
-      2,
-      "always"
-    ],
-    "standard/no-callback-literal": 2,
-    "strict": [
-      "error",
-      "global"
-    ],
+    "standard/object-curly-even-spacing": [2, "always"],
+    "strict": ["error", "global"],
     "symbol-description": 2,
     "template-curly-spacing": 2,
     "template-tag-spacing": 2,
     "unicode-bom": 2,
-    "unicorn/catch-error-name": [
-      "error",
-      {
-        "name": "err"
-      }
-    ],
+    "unicorn/catch-error-name": ["error", { "name": "err" }],
     "unicorn/custom-error-definition": 0,
     "unicorn/error-message": 2,
     "unicorn/escape-case": 2,
