@@ -112,15 +112,5 @@
         ]
       }
     ]
-  },
-  "bundleDependencies": [
-    "@vue/eslint-plugin",
-    "es-css-modules",
-    "eslint-plugin-babel",
-    "eslint-plugin-html",
-    "eslint-plugin-json",
-    "eslint-plugin-filenames",
-    "eslint-plugin-you-dont-need-lodash-underscore",
-    "eslint-plugin-you-dont-need-momentjs"
-  ]
+  }
 }
