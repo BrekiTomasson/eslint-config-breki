@@ -26,7 +26,6 @@
     "url": "https://github.com/BrekiTomasson/eslint-config-breki/issues"
   },
   "dependencies": {
-    "@vue/eslint-plugin": "^4.2.0",
     "eslint-plugin-array-func": "~3.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-filenames": "^1.3.2",
@@ -40,7 +39,6 @@
     "eslint-plugin-security": "~1.4.0",
     "eslint-plugin-standard": "~4.0.0",
     "eslint-plugin-unicorn": "^6.0.1",
-    "eslint-plugin-vue": "^4.7.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0",
     "eslint-plugin-you-dont-need-momentjs": "^1.4.0",
     "regenerator-runtime": "~0.12.1",
@@ -49,8 +47,7 @@
   "devDependencies": {
     "jest": "^23.6.0",
     "jest-runner-eslint": "~0.6.0",
-    "travis-deploy-once": "^5.0.9",
-    "vue-jest": "^3.0.0"
+    "travis-deploy-once": "^5.0.9"
   },
   "peerDependencies": {
     "eslint": "~5.7.0",
@@ -69,7 +66,6 @@
     "eslint-plugin-security": "~1.4.0",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^6.0.1",
-    "eslint-plugin-vue": "^4.7.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0",
     "eslint-plugin-you-dont-need-momentjs": "^1.4.0",
     "jest": "^23.6.0",
@@ -85,7 +81,7 @@
         "displayName": "Linting Test",
         "runner": "jest-runner-eslint",
         "testMatch": [
-          "<rootDir>/**/*.{js,vue}"
+          "<rootDir>/**/*.js"
         ]
       },
       {
@@ -93,7 +89,7 @@
         "cacheDirectory": "<rootDir>/test/tmp",
         "collectCoverage": true,
         "collectCoverageFrom": [
-          "**/*.{js,vue}",
+          "**/*.js",
           "!**/node_modules/**",
           "!<rootDir>/test/coverage/**"
         ],
@@ -117,8 +113,7 @@
         "displayName": "Code tests",
         "moduleFileExtensions": [
           "js",
-          "json",
-          "vue"
+          "json"
         ],
         "forceCoverageMatch": [
           "<rootDir>/test/*.test.js"
@@ -129,23 +124,12 @@
           "<rootDir>/test/*.test.js"
         ],
         "transform": {
-          "^.+\\.js$": "babel-jest",
-          "^.+\\.vue$": "vue-jest"
+          "^.+\\.js$": "babel-jest"
         },
         "watchPathIgnorePatterns": [
           "<rootDir>/node_modules/"
         ]
       }
     ]
-  },
-  "bundleDependencies": [
-    "@vue/eslint-plugin",
-    "es-css-modules",
-    "eslint-plugin-babel",
-    "eslint-plugin-html",
-    "eslint-plugin-json",
-    "eslint-plugin-filenames",
-    "eslint-plugin-you-dont-need-lodash-underscore",
-    "eslint-plugin-you-dont-need-momentjs"
-  ]
+  }
 }
