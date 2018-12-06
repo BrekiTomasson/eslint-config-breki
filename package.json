@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-breki",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
   "license": "MIT",
   "scripts": {
