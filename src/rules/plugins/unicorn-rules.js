@@ -1,5 +1,5 @@
 module.exports = {
-  'unicorn/catch-error-name': ['error', { 'name': 'err' }],
+  'unicorn/catch-error-name': ['error', { name: 'err' }],
   'unicorn/custom-error-definition': 0,
   'unicorn/error-message': 2,
   'unicorn/escape-case': 2,
@@ -15,7 +15,7 @@ module.exports = {
   'unicorn/no-unsafe-regex': 2,
   'unicorn/number-literal-case': 2,
   'unicorn/prefer-add-event-listener': 2,
-  'unicorn/prefer-exponentiation-operator':  2,
+  'unicorn/prefer-exponentiation-operator': 2,
   'unicorn/prefer-spread': 2,
   'unicorn/prefer-starts-ends-with': 2,
   'unicorn/prefer-type-error': 2,
