@@ -1,7 +1,9 @@
 module.exports = {
   'babel/new-cap': 'warn',
   'babel/no-invalid-this': 'warn',
-  'babel/object-curly-spacing': 'warn',
+  'babel/object-curly-spacing': [
+    'error', 'always', { arraysInObjects: true, objectsInObjects: true }
+  ],
   'babel/quotes': [
     'warn',
     'single',

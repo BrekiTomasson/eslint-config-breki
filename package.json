@@ -30,6 +30,7 @@
     "url": "https://github.com/BrekiTomasson/eslint-config-breki/issues"
   },
   "dependencies": {
+    "app-root-path": "^2.1.0",
     "debug": "^4.1.1",
     "dotenv": "^6.2.0",
     "eslint": "^5.12.0",
@@ -64,6 +65,8 @@
     "jest-runner-eslint": "^0.7.1",
     "lint-staged": "^8.1.0",
     "travis-deploy-once": "^5.0.11",
+    "tslint": "^5.12.0",
+    "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.2.2"
   },
   "homepage": "https://github.com/BrekiTomasson/eslint-config-breki#readme",

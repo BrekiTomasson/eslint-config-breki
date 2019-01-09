@@ -3,11 +3,11 @@ const pkg = require('../package.json')
 const path = require('path')
 
 module.exports = {
-  cmd: 'lint',
-  version: pkg.version,
-  homepage: pkg.homepage,
   bugs: pkg.bugs.url,
+  cmd: 'lint',
+  eslint,
+  eslintConfig: { configFile: path.join(__dirname, '../.eslintrc.js') },
+  homepage: pkg.homepage,
   tagline: 'Honesty in small things is not a small thing.',
-  eslintConfig: {configFile: path.join(__dirname, '../.eslintrc.js')},
-  eslint
+  version: pkg.version
 }

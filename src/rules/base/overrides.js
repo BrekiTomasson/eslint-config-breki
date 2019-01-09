@@ -6,9 +6,6 @@ module.exports = [
       'test/**/*.js'
     ],
     rules: {
-
-      // The following are overridden in babel-rules.js:
-
       'new-cap': 'off',
       'no-invalid-this': 'off',
       'no-unused-expressions': 'off',

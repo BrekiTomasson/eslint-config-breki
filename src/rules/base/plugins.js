@@ -18,4 +18,6 @@ module.exports = [
   'vue',
   'you-dont-need-lodash-underscore',
   'you-dont-need-momentjs'
-].filter((plugin) => { return installMissing(plugin) })
+].filter((plugin) => {
+  return installMissing(plugin)
+})
