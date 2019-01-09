@@ -1,3 +1,6 @@
+/**
+ * The "Options" object to be tested in this file.
+ */
 const options = require('../src/options')
 
 describe('options test suite', () => {
