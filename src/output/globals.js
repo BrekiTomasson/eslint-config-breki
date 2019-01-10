@@ -1,4 +1,4 @@
-export const globals = {
+module.exports = {
   document: true,
   navigator: false,
   window: true

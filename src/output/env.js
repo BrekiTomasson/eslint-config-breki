@@ -1,4 +1,4 @@
-export const env = {
+module.exports = {
   amd: true,
   browser: true,
   commonjs: true,

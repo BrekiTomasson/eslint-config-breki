@@ -1,25 +1,4 @@
-import * as pluginRules from './pluginRules'
-
-export const rules = Object.assign(
-  {},
-  pluginRules.arrayFunc,
-  pluginRules.babel,
-  pluginRules.es,
-  pluginRules.filenames,
-  pluginRules.html,
-  pluginRules.imports,
-  pluginRules.jest,
-  pluginRules.json,
-  pluginRules.node,
-  pluginRules.ocd,
-  pluginRules.promise,
-  pluginRules.security,
-  pluginRules.standard,
-  pluginRules.unicorn,
-  pluginRules.vue,
-  pluginRules.youDontNeedLodashUnderscore,
-  pluginRules.youDontNeedMomentjs,
-  {
+module.exports = {
   'array-bracket-spacing': ['error', 'never'],
   'arrow-spacing': ['error', { after: true, before: true }],
   'block-spacing': ['error', 'always'],
@@ -27,18 +6,13 @@ export const rules = Object.assign(
   'computed-property-spacing': ['error', 'never'],
   'func-call-spacing': ['error', 'never'],
   'generator-star-spacing': ['error', { after: true, before: true }],
-  'key-spacing': ['error', {
-    align: {
-      afterColon: true,
-      beforeColon: true,
-      on: "colon"
-    }
-  }],
+  'key-spacing': ['error', { beforeColon: false, afterColon: true }],
   'keyword-spacing': ['error', { after: true, before: true }],
   'no-irregular-whitespace': 'error',
   'no-mixed-spaces-and-tabs': 'error',
   'no-multi-spaces': ['warn', {
-    ignoreEOLComments: true, exceptions: {
+    ignoreEOLComments: true,
+    exceptions: {
       Property: true,
       BinaryExpression: false,
       VariableDeclarator: false,
@@ -51,22 +25,24 @@ export const rules = Object.assign(
   'space-before-blocks': ['error', 'always'],
   'space-before-function-paren': ['error', 'always'],
   'space-in-parens': ['error', 'never'],
-  'space-infix-ops': ['error', { "int32Hint": false }],
+  'space-infix-ops': ['error', { int32Hint: false }],
   'space-unary-ops': ['error', { nonwords: false, words: true }],
-  'spaced-comment': ['error', 'always', {
-    block: {
-      balanced: true,
-      exceptions: ['*', '-', '+', '='],
-      markers: ['*package', '!', ',', ':', '::']
-    },
-    line: {
-      markers: ['*package', '!', '/', ',', '=']
+  'spaced-comment': [
+    'error', 'always', {
+      block: {
+        balanced: true,
+        exceptions: ['*', '-', '+', '='],
+        markers: ['*package', '!', ',', ':', '::']
+      },
+      line: {markers: ['*package', '!', '/', ',', '=']}
     }
-  }],
+  ],
   'template-curly-spacing': ['error', 'never'],
   'template-tag-spacing': ["error", "always"],
   'yield-star-spacing': ['error', 'both'],
+
   // Arrows
+
   'arrow-body-style': ['error', 'as-needed'],
   'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
   'implicit-arrow-linebreak': ['error', 'beside'],
@@ -74,8 +50,9 @@ export const rules = Object.assign(
   'no-confusing-arrow': 'error',
 
   // Braces, Brackets, etc.
+
   'brace-style': ['error', '1tbs', { allowSingleLine: true }],
-  'array-bracket-newline': ['error', { multiline: true }],
+  'array-bracket-newline': ['error', 'consistent'],
   'new-parens': 'error',
   'no-extra-parens': ['warn', 'all', {
     conditionalAssign: false,
@@ -356,4 +333,4 @@ export const rules = Object.assign(
     'error',
     'never'
   ]
-})
+}
