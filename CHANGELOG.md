@@ -1,5 +1,12 @@
 # Changelog for `eslint-config-breki`
 
+## v1.0.20 - January 8, 2019
+
+```
+- [Changed] : Began migration of project into TypeScript. Planning a more
+              modular approach to how the various rules are loaded/imported.
+```
+
 ## v1.0.10 - November 22, 2018
 
 ```

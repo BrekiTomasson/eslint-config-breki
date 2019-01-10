@@ -1,9 +1,16 @@
-.idea
-*.log
-vendor/**
-node_modules
-.DS_Store
-*.tmp
-test/tmp
-.idea/**
+### Ignore things from IDEs. ##############################
+/.vscode
+/.idea
 
+### Ignore OS-specific files. #############################
+.DS_Store
+Thumbs.db
+
+### Ignore temp files and log files. ######################
+*.log
+*.tmp
+test/tmp/**/*
+
+### And ignore things that should be rebuilt. #############
+package-lock.json
+node_modules

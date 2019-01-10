@@ -1,19 +1,36 @@
-const options = require('../options')
+/**
+ * The "Options" object to be tested in this file.
+ */
+const options = require('../src/options')
 
 describe('options test suite', () => {
-  test('exports an object', () => {
-    expect(options).toBeDefined()
+  it('exports an object', () => {
+    expect.hasAssertions(
+      expect(options).toBeDefined()
+    )
   })
 
-  test('should have command named lint', () => {
-    expect(options.cmd).toBe('lint')
+  it('has a command named lint', () => {
+    expect.hasAssertions(
+      expect(options.cmd).toBe('lint')
+    )
   })
 
-  test('should have cwd that is empty', () => {
-    expect(options.cwd).toBe('')
+  it('should have cwd that is empty', () => {
+    expect.hasAssertions(
+      expect(options.cwd).toBe('')
+    )
   })
 
-  test('should have a bugs URL', () => {
-    expect(options.bugs).toBe('https://github.com/BrekiTomasson/eslint-config-breki/issues')
+  it('should contain an eslint object', () => {
+    expect.hasAssertions(
+      expect(options.eslint).toHaveProperty
+    )
+  })
+
+  it('should have a bugs URL', () => {
+    expect.hasAssertions(
+      expect(options.bugs).toContain('BrekiTomasson')
+    )
   })
 })
