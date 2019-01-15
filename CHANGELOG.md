@@ -1,5 +1,12 @@
 # Changelog for `eslint-config-breki`
 
+## v1.0.21 - January 15, 2019
+
+```
+- [Added]   : Introduced eslint-plugin-flowtype to the mix and revised rules
+              from other packages slightly to harmonize them with the addition.
+```
+
 ## v1.0.20 - January 8, 2019
 
 ```

@@ -1,18 +1,12 @@
-import { env } from './output/env'
-import { extend } from './output/extends'
-import { globals } from './output/globals'
-import { overrides } from './output/overrides'
-import { parserOptions } from './output/parserOptions'
-import { plugins } from './output/plugins'
-import { rules } from './output/rules'
+import { overrides } from './overrides/'
 
-export = {
-  env,
-  extends: extend,
-  globals,
-  overrides,
+export default {
+  env: BaseConfiguration.env,
+  extends: BaseConfiguration.extend,
+  globals: BaseConfiguration.globals,
+  overrides: overrides,
+  parserOptions: BaseConfiguration.parserOptions,
   parser: 'babel-eslint',
-  parserOptions,
-  plugins,
-  rules
+  plugins: BaseConfiguration.plugins,
+  rules: BaseConfiguration.rules
 }

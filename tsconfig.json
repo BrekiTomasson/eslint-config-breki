@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "es6",
     "module": "commonjs",
     "lib": [
       "es2017",
       "es2018"
     ],
-    "declaration": true,
+    "declaration": false,
     "declarationMap": false,
     "sourceMap": false,
     "outDir": "./dist",
     "rootDir": "./src",
-    "composite": true,
+    "composite": false,
     "removeComments": true,
     "importHelpers": true,
     // Strict Type-Checking Options
     "strict": true,
     "noImplicitThis": true,
-    "alwaysStrict": true,
+    "alwaysStrict": false,
     // Additional Checks
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -26,6 +26,17 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "baseUrl": "./src",
+    "paths": {
+      "@b/*": [
+        "base/*"
+      ],
+      "@o/*": [
+        "overrides/*"
+      ],
+      "@u/*": [
+        "utility/*"
+      ]
+    },
     "typeRoots": [
       "./src/types/"
     ],

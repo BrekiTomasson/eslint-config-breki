@@ -1,32 +1,36 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayFunc = {
+namespace BaseConfiguration {
+  export const arrayFunc = {
     'array-func/from-map': 'error',
     'array-func/no-unnecessary-this-arg': 'error',
     'array-func/prefer-array-from': 'error',
     'array-func/avoid-reverse': 'error',
     'array-func/prefer-flat-map': 'error',
     'array-func/prefer-flat': 'error',
-};
-exports.es = {};
-exports.filenames = {
+  }
+
+  export const es = {
+    // TO DO
+  }
+  export const filenames = {
     'filenames/match-exported': ['error', [null, 'kebab', 'pascal', 'camel']],
     'filenames/match-regex': 0,
     'filenames/no-index': 0
-};
-exports.html = {};
-exports.imports = {
+  }
+  export const html = {
+    // TO DO
+  }
+  export const imports = {
     'import/export': 'error',
     'import/first': 'error',
     'import/no-duplicates': 'error',
     'import/no-webpack-loader-syntax': 'error',
-};
-exports.jest = {
+  }
+  export const jest = {
     'jest/consistent-test-it': [
-        "error", {
-            fn: "it",
-            withinDescribe: "it"
-        }
+      "error", {
+        fn: "it",
+        withinDescribe: "it"
+      }
     ],
     'jest/expect-expect': 'warn',
     'jest/lowercase-name': 'error',
@@ -52,9 +56,11 @@ exports.jest = {
     'jest/valid-describe': 'error',
     'jest/valid-expect-in-promise': 'error',
     'jest/valid-expect': 'error'
-};
-exports.json = {};
-exports.node = {
+  };
+  export const json = {
+    // TO DO
+  }
+  export const node = {
     'node/exports-style': ['error', 'module.exports'],
     'node/no-deprecated-api': 'error',
     'node/no-extraneous-import': ['error', { allowModules: [] }],
@@ -64,13 +70,13 @@ exports.node = {
     'node/no-unpublished-require': ['error', { tryExtensions: ['.js', '.json', '.vue', '.node'] }],
     'node/process-exit-as-throw': 'error',
     'node/shebang': 'error',
-};
-exports.ocd = {
+  }
+  export const ocd = {
     'ocd/sort-import-declaration-specifiers': 'error',
     'ocd/sort-import-declarations': 'error',
     'ocd/sort-variable-declarator-properties': 'error',
-};
-exports.promise = {
+  }
+  export const promise = {
     'promise/always-return': 'error',
     'promise/no-return-wrap': 'error',
     'promise/param-names': 'error',
@@ -83,8 +89,8 @@ exports.promise = {
     'promise/no-new-statics': 'error',
     'promise/no-return-in-finally': 'warn',
     'promise/valid-params': 'warn'
-};
-exports.security = {
+  }
+  export const security = {
     'security/detect-unsafe-regex': 'warn',
     'security/detect-buffer-noassert': 'warn',
     'security/detect-child-process': 'warn',
@@ -97,67 +103,82 @@ exports.security = {
     'security/detect-object-injection': 'warn',
     'security/detect-possible-timing-attacks': 'warn',
     'security/detect-pseudoRandomBytes': 'warn'
-};
-exports.standard = {
+  }
+  export const standard = {
     'standard/array-bracket-even-spacing': ['error', 'never'],
     'standard/computed-property-even-spacing': 'off',
     'standard/no-callback-literal': ['error', ['cb', 'callback']],
     'standard/object-curly-even-spacing': ['error', 'always'],
-};
-exports.unicorn = {
+  }
+  export const unicorn = {
     'unicorn/catch-error-name': ['error', { name: 'err' }],
-    'unicorn/explicit-length-check': ['error', { 'non-zero': 'not-equal' }],
-    'unicorn/filename-case': 'off',
-    'unicorn/no-abusive-eslint-disable': 'error',
-    'unicorn/no-process-exit': 'error',
-    'unicorn/throw-new-error': 'error',
-    'unicorn/number-literal-case': 'error',
-    'unicorn/escape-case': 'error',
-    'unicorn/no-array-instanceof': 'error',
-    'unicorn/no-new-buffer': 'error',
-    'unicorn/no-hex-escape': 'error',
     'unicorn/custom-error-definition': 'error',
-    'unicorn/prefer-starts-ends-with': 'error',
-    'unicorn/prefer-type-error': 'error',
-    'unicorn/no-fn-reference-in-iterator': 'off',
+    'unicorn/error-message': 'error',
+    'unicorn/escape-case': 'error',
+    'unicorn/explicit-length-check': ['error', { 'non-zero': 'not-equal' }],
+    'unicorn/filename-case': 'off', // This is handled already by eslint-plugin-filenames
     'unicorn/import-index': 'error',
     'unicorn/new-for-builtins': 'error',
-    'unicorn/regex-shorthand': 'error',
-    'unicorn/prefer-spread': 'error',
-    'unicorn/error-message': 'error',
+    'unicorn/no-abusive-eslint-disable': 'error',
+    'unicorn/no-array-instanceof': 'error',
+    'unicorn/no-fn-reference-in-iterator': 'off',
+    'unicorn/no-hex-escape': 'error',
+    'unicorn/no-new-buffer': 'error',
+    'unicorn/no-process-exit': 'error',
     'unicorn/no-unsafe-regex': 'error',
+    'unicorn/number-literal-case': 'error',
     'unicorn/prefer-add-event-listener': 'error',
     'unicorn/prefer-exponentiation-operator': 'error',
-    'unicorn/no-console-spaces': 'error',
-    'unicorn/no-unreadable-array-destructuring': 'error',
-    'unicorn/no-unused-properties': 'warn',
-    'unicorn/prefer-node-append': 'warn',
-};
-exports.vue = {};
-exports.youDontNeedLodashUnderscore = {};
-exports.youDontNeedMomentjs = {};
-exports.babel = {
+    'unicorn/prefer-spread': 'error',
+    'unicorn/prefer-starts-ends-with': 'error',
+    'unicorn/prefer-type-error': 'error',
+    'unicorn/regex-shorthand': 'error',
+    'unicorn/throw-new-error': 'error',
+
+    // - Have these been removed?
+    //  'unicorn/no-console-spaces': 'error',
+    //  'unicorn/no-unreadable-array-destructuring': 'error',
+    //  'unicorn/no-unused-properties': 'warn',
+    //  'unicorn/prefer-node-append': 'warn',
+
+  }
+  export const vue = {
+    // TO DO
+  }
+  export const youDontNeedLodashUnderscore = {
+    // TO DO
+  }
+  export const youDontNeedMomentjs = {
+    // TO DO
+  }
+
+  export const flowtype = {
+    'flowtype/array-style-complex-type': [1, 'verbose']
+  }
+
+  export const babel = {
     'babel/new-cap': 'warn',
     'babel/no-invalid-this': 'warn',
     'babel/object-curly-spacing': [
-        'error', 'always', { arraysInObjects: true, objectsInObjects: true }
+      'error', 'always', { arraysInObjects: true, objectsInObjects: true }
     ],
     'babel/quotes': [
-        'warn',
-        'single',
-        {
-            allowTemplateLiterals: true,
-            avoidEscape: true
-        }
+      'warn',
+      'single',
+      {
+        allowTemplateLiterals: true,
+        avoidEscape: true
+      }
     ],
     'babel/semi': ['error', 'never'],
     'babel/no-unused-expressions': [
-        'error',
-        {
-            allowShortCircuit: true,
-            allowTaggedTemplates: true,
-            allowTernary: true
-        }
+      'error',
+      {
+        allowShortCircuit: true,
+        allowTaggedTemplates: true,
+        allowTernary: true
+      }
     ],
     'babel/valid-typeof': 'error',
-};
+  }
+}
