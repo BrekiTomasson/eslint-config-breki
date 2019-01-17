@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
   extends: [
-    './dist/index.js'
+    './index.js'
   ]
 }
