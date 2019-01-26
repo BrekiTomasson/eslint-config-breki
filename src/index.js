@@ -8,5 +8,4 @@ module.exports = {
   plugins: rules.plugins,
   parser: rules.parser,
   rules: rules.rules,
-  overrides: rules.overrides,
 }
