@@ -3,14 +3,18 @@
 ## v1.0.21 - January 15, 2019
 
 ```
-- [Added]   : Introduced eslint-plugin-flowtype to the mix and revised rules
-              from other packages slightly to harmonize them with the addition.
+- [Added]   : Introduced eslint-plugin-flowtype to the mix.
+- [Removed] : Seriously cut down on the various extraneous modules being
+              used in the repo. Also gave up on the idea of using
+              Typescript, it felt like too much work for far too little
+              effort.
+              (... node_modules before: 154mb. node_modules after: 67mb)
 ```
 
 ## v1.0.20 - January 8, 2019
 
 ```
-- [Changed] : Began migration of project into TypeScript. Planning a more
+- [Changed] : Began migration of project into Typescript. Planning a more
               modular approach to how the various rules are loaded/imported.
 ```
 

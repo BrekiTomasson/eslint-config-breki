@@ -12,7 +12,6 @@ module.exports = [
   'ocd',
   'promise',
   'security',
-  'standard',
   'unicorn',
   'vue',
   'you-dont-need-lodash-underscore',
