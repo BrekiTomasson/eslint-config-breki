@@ -72,5 +72,5 @@
     "test": "jest",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "version": "1.0.20"
+  "version": "1.0.21"
 }
