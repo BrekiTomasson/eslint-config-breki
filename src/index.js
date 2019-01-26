@@ -1,16 +1,14 @@
-const env = require('./output/env')
-const extend = require('./output/extends')
-const globals = require('./output/globals')
-const overrides = require('./output/overrides')
-const parserOptions = require('./output/parserOptions')
-const plugins = require('./output/plugins')
-const rules = require('./output/rules/core')
+const env = require('./env')
+const extend = require('./extends')
+const globals = require('./globals')
+const parserOptions = require('./parserOptions')
+const plugins = require('./plugins')
+const rules = require('./rules')
 
 module.exports = {
   env,
   extends: extend,
   globals,
-  overrides,
   parser: 'babel-eslint',
   parserOptions,
   plugins,
