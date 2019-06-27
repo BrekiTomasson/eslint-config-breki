@@ -94,13 +94,7 @@ module.exports = {
   "dot-location": [2, "property"],
   "dot-notation": 2,
   "eol-last": 2,
-  eqeqeq: [
-    2
-    "always",
-    {
-      null: "ignore"
-    }
-  ],
+  eqeqeq: [2, "always", { null: "ignore" }],
   "for-direction": 2,
   "func-call-spacing": [
     2,
