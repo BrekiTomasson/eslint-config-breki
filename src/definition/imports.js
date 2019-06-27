@@ -1,6 +1,6 @@
 module.exports = {
-  'import/export': 'error',
-  'import/first': 'error',
-  'import/no-duplicates': 'error',
-  'import/no-webpack-loader-syntax': 'error',
+  'import/export': 2,
+  'import/first': 2,
+  'import/no-duplicates': 2,
+  'import/no-webpack-loader-syntax': 2,
 }

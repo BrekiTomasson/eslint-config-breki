@@ -1,5 +1,5 @@
 module.exports = {
-  'ocd/sort-import-declaration-specifiers': 'error',
-  'ocd/sort-import-declarations': 'error',
-  'ocd/sort-variable-declarator-properties': 'error',
+  'ocd/sort-import-declaration-specifiers': 2,
+  'ocd/sort-import-declarations': 2,
+  'ocd/sort-variable-declarator-properties': 2,
 }
