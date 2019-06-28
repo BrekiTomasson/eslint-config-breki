@@ -1,7 +1,5 @@
 module.exports = {
-  'jest/consistent-test-it': [
-    2, { fn: "it", withinDescribe: "it" }
-  ],
+  'jest/consistent-test-it': [2, { fn: 'it', withinDescribe: 'it' }],
   'jest/expect-expect': 1,
   'jest/lowercase-name': 2,
   'jest/no-alias-methods': 2,

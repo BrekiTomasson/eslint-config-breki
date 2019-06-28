@@ -3,7 +3,6 @@ module.exports = [
   'babel',
   'es',
   'filenames',
-  'html',
   'import',
   'flowtype',
   'jest',
@@ -13,7 +12,6 @@ module.exports = [
   'promise',
   'security',
   'unicorn',
-  'vue',
   'you-dont-need-lodash-underscore',
   'you-dont-need-momentjs'
 ]

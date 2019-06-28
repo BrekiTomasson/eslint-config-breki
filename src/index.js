@@ -9,7 +9,6 @@ module.exports = {
   env,
   extends: extend,
   globals,
-  parser: 'babel-eslint',
   parserOptions,
   plugins,
   rules

@@ -4,7 +4,7 @@ module.exports = {
   'unicorn/error-message': 2,
   'unicorn/escape-case': 2,
   'unicorn/explicit-length-check': [2, { 'non-zero': 'not-equal' }],
-  'unicorn/filename-case': 0, // This is handled already by eslint-plugin-filenames
+  'unicorn/filename-case': 0,
   'unicorn/import-index': 2,
   'unicorn/new-for-builtins': 2,
   'unicorn/no-abusive-eslint-disable': 2,
@@ -34,5 +34,5 @@ module.exports = {
   'unicorn/prefer-type-error': 2,
   'unicorn/prevent-abbreviations': 2,
   'unicorn/regex-shorthand': 2,
-  'unicorn/throw-new-error': 2,
+  'unicorn/throw-new-error': 2
 }

@@ -1,5 +1,6 @@
 module.exports = {
-  ecmaVersion: 2019,
+  parser: 'babel-eslint',
+  ecmaVersion: 2017,
   sourceType: 'module',
   ecmaFeatures: {
     arrowFunctions: true,
