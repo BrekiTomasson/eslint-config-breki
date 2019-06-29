@@ -11,5 +11,10 @@ module.exports = {
   globals,
   parserOptions,
   plugins,
-  rules
+  rules,
+  settings: {
+  	"flowtype": {
+  		"onlyFilesWithFlowAnnotation": true
+  	}
+  }
 }
