@@ -4,7 +4,6 @@ module.exports = [
   'es',
   'filenames',
   'import',
-  'flowtype',
   'jest',
   'json',
   'node',
