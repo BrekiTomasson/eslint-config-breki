@@ -7,7 +7,7 @@ module.exports = {
   'promise/no-nesting': 1,
   'promise/no-promise-in-callback': 1,
   'promise/no-callback-in-promise': 1,
-  'promise/avoid-new': 1,
+  'promise/avoid-new': 0,
   'promise/no-new-statics': 2,
   'promise/no-return-in-finally': 1,
   'promise/valid-params': 1
