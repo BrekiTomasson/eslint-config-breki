@@ -50,5 +50,5 @@
     "prepush": "npm run test",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "version": "1.0.27"
+  "version": "1.0.28"
 }
