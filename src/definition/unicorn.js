@@ -1,5 +1,5 @@
 module.exports = {
-  'unicorn/catch-error-name': [2, { name: 'err' }],
+  'unicorn/catch-error-name': [2, { name: 'error' }],
   'unicorn/custom-error-definition': 2,
   'unicorn/error-message': 2,
   'unicorn/escape-case': 2,

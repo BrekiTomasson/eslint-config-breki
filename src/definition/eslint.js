@@ -106,7 +106,9 @@ module.exports = {
     }
   ],
   'line-comment-position': [2, { position: 'above' }],
-  'linebreak-style': [2, 'unix'],
+
+  // 'linebreak-style': [2, 'unix'],
+
   'lines-around-comment': [
     2, {
       afterBlockComment: false,
