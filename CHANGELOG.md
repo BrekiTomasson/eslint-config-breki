@@ -13,8 +13,8 @@
 - **Rule Changes**: Added new rules from `eslint-plugin-unicorn` and removed deprecated ones.
 - **Rule Changes**: Reworked ruleset for `eslint-plugin-node`, making it more strict on potential sources of errors.
 - **Rule Changes**: Changed `no-extra-parens`, changing option `conditionalAssign` to `true`, and added new options
-  `enforceForSequenceExpressions`, `enforceForNewInMemberExpressions`, and `enforceForFunctionPrototypeExpressions`,
-  all `true`
+  `enforceForSequenceExpressions`, `enforceForNewInMemberExpressions`, and `enforceForFunctionPrototypeMethods`,
+  all `true`.
 - **Rule Changes**: Added options `ignoreDefaultValues`, `enforceConst`, and `detectObjects` to `no-magic-numbers`, all
   `true`.
 - **Code Style**: Moved some more scaffolding down into the root folder's `index.js`.

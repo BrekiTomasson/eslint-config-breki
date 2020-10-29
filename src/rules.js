@@ -6,6 +6,7 @@ const ruleCollection = importModules(resolve(__dirname, './definition/'), { came
 const rules = {}
 
 Object.keys(ruleCollection)
+  // eslint-disable-next-line security/detect-object-injection
   .filter(ruleset => Object.assign(rules, ruleCollection[ruleset]))
 
 module.exports = rules

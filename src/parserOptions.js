@@ -1,7 +1,9 @@
+const ECMAVERSION = 2020
+
 module.exports = {
   parser: 'babel-eslint',
   allowImportExportEverywhere: true,
-  ecmaVersion: 2020,
+  ecmaVersion: ECMAVERSION,
   sourceType: 'module',
   ecmaFeatures: {
     arrowFunctions: true,

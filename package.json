@@ -45,10 +45,9 @@
     "url": "https://github.com/BrekiTomasson/breki-eslint-config.git"
   },
   "scripts": {
-    "lint": "eslint \"./**/*.js\"",
+    "lint": "eslint \"./src/**/*.js\"",
     "patch": "npm version patch && npm publish && git push --follow-tags",
-    "prepush": "npm run test",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "version": "1.0.29"
+  "version": "1.0.30"
 }

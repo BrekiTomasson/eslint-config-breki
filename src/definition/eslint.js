@@ -1,3 +1,8 @@
+const MAXCOMPLEXITY = 8
+const MAXLINELENGTH = 120
+const MAXSTATEMENTS = 20
+const CHAINDEPTHTOIGNORE = 4
+
 module.exports = {
   'accessor-pairs': 1,
   'array-callback-return': 2,
@@ -34,7 +39,7 @@ module.exports = {
     }
   ],
   'comma-style': [2, 'last'],
-  complexity: [2, { max: 8 }],
+  complexity: [2, { max: MAXCOMPLEXITY }],
   'computed-property-spacing': [2, 'never'],
   'consistent-return': 2,
   'consistent-this': 0,
@@ -48,7 +53,7 @@ module.exports = {
   'for-direction': 2,
   'func-call-spacing': [2, 'never'],
   'func-name-matching': [2, 'always'],
-  'func-names': [2, { generators: 'always' }],
+  'func-names': [2, 'always', { generators: 'always' }],
   'func-style': 0,
   'generator-star-spacing': [
     2, {
@@ -117,20 +122,20 @@ module.exports = {
   'max-depth': 0,
   'max-len': [
     2, {
-      code: 120,
-      comments: 120,
+      code: MAXLINELENGTH,
+      comments: MAXLINELENGTH,
       ignoreTemplateLiterals: true
     }
   ],
   'max-nested-callbacks': 0,
   'max-params': 0,
-  'max-statements': [2, { max: 20 }],
+  'max-statements': [2, { max: MAXSTATEMENTS }],
   'max-statements-per-line': [2, { max: 2 }],
   'new-cap': 0,
   'new-parens': 2,
   'newline-per-chained-call': [
     1,
-    { ignoreChainWithDepth: 4 }
+    { ignoreChainWithDepth: CHAINDEPTHTOIGNORE }
   ],
   'no-alert': 2,
   'no-array-constructor': 2,
@@ -175,7 +180,7 @@ module.exports = {
       enforceForArrowConditionals: true,
       enforceForSequenceExpressions: true,
       enforceForNewInMemberExpressions: true,
-      enforceForFunctionPrototypeExpressions: true
+      enforceForFunctionPrototypeMethods: true
     }
   ],
   'no-extra-semi': 2,
