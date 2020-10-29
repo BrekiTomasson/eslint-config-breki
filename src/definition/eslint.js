@@ -1,13 +1,6 @@
 module.exports = {
-  'new-cap': 0,
-  camelcase: 0,
-  'no-invalid-this': 0,
-  'object-curly-spacing': 0,
-  quotes: 0,
-  semi: 0,
-  'no-unused-expressions': 0,
-  'valid-typeof': 0,
-  'accessor-pairs': [2, { setWithoutGet: true }],
+  'accessor-pairs': 1,
+  'array-callback-return': 2,
   'array-bracket-newline': [2, { multiline: true }],
   'array-bracket-spacing': [2, 'never'],
   'arrow-body-style': [2, 'as-needed'],
@@ -15,7 +8,7 @@ module.exports = {
   'arrow-spacing': [
     2, {
       after: true,
-      before: true,
+      before: true
     }
   ],
   'block-scoped-var': 2,
@@ -24,7 +17,6 @@ module.exports = {
     2, '1tbs',
     { allowSingleLine: true }
   ],
-  'callback-return': 2,
   camelcase: 0,
   'comma-dangle': [
     2, {
@@ -32,13 +24,13 @@ module.exports = {
       exports: 'never',
       functions: 'never',
       imports: 'never',
-      objects: 'only-multiline',
+      objects: 'only-multiline'
     }
   ],
   'comma-spacing': [
     2, {
       after: true,
-      before: false,
+      before: false
     }
   ],
   'comma-style': [2, 'last'],
@@ -56,17 +48,16 @@ module.exports = {
   'for-direction': 2,
   'func-call-spacing': [2, 'never'],
   'func-name-matching': [2, 'always'],
+  'func-names': [2, { generators: 'always' }],
   'func-style': 0,
   'generator-star-spacing': [
     2, {
       after: true,
-      before: true,
+      before: true
     }
   ],
   'getter-return': 2,
-  'global-require': 2,
   'guard-for-in': 2,
-  'handle-callback-err': [2, '^(err|error)$'],
   'implicit-arrow-linebreak': [2, 'beside'],
   indent: [
     2,
@@ -76,11 +67,11 @@ module.exports = {
       CallExpression: { arguments: 1 },
       FunctionDeclaration: {
         body: 1,
-        parameters: 1,
+        parameters: 1
       },
       FunctionExpression: {
         body: 1,
-        parameters: 1,
+        parameters: 1
       },
       ImportDeclaration: 1,
       MemberExpression: 1,
@@ -89,20 +80,20 @@ module.exports = {
       VariableDeclarator: 'first',
       flatTernaryExpressions: false,
       ignoreComments: false,
-      outerIIFEBody: 1,
+      outerIIFEBody: 1
     }
   ],
   'init-declarations': [2, 'always'],
   'key-spacing': [
     2, {
       afterColon: true,
-      beforeColon: false,
+      beforeColon: false
     }
   ],
   'keyword-spacing': [
     2, {
       after: true,
-      before: true,
+      before: true
     }
   ],
   'line-comment-position': [2, { position: 'above' }],
@@ -120,7 +111,7 @@ module.exports = {
       allowObjectEnd: true,
       allowObjectStart: true,
       beforeBlockComment: true,
-      beforeLineComment: true,
+      beforeLineComment: true
     }
   ],
   'max-depth': 0,
@@ -128,7 +119,7 @@ module.exports = {
     2, {
       code: 120,
       comments: 120,
-      ignoreTemplateLiterals: true,
+      ignoreTemplateLiterals: true
     }
   ],
   'max-nested-callbacks': 0,
@@ -177,11 +168,14 @@ module.exports = {
     1,
     'all',
     {
-      conditionalAssign: false,
-      enforceForArrowConditionals: true,
-      ignoreJSX: 'multi-line',
-      nestedBinaryExpressions: true,
+      conditionalAssign: true,
       returnAssign: true,
+      nestedBinaryExpressions: true,
+      ignoreJSX: 'multi-line',
+      enforceForArrowConditionals: true,
+      enforceForSequenceExpressions: true,
+      enforceForNewInMemberExpressions: true,
+      enforceForFunctionPrototypeExpressions: true
     }
   ],
   'no-extra-semi': 2,
@@ -203,14 +197,13 @@ module.exports = {
   'no-lonely-if': 2,
   'no-loop-func': 2,
   'no-magic-numbers': [
-    2, {
-      ignore: [
-        -1,
-        0,
-        1,
-        2,
-      ],
+    2,
+    {
+      ignore: [-1, 0, 1, 2],
       ignoreArrayIndexes: true,
+      ignoreDefaultValues: true,
+      enforceConst: true,
+      detectObjects: true
     }
   ],
   'no-mixed-operators': [
@@ -225,17 +218,17 @@ module.exports = {
           '>',
           '>=',
           '<',
-          '<=',
+          '<='
         ],
         [
           '&&',
-          '||',
+          '||'
         ],
         [
           'in',
-          'instanceof',
-        ],
-      ],
+          'instanceof'
+        ]
+      ]
     }
   ],
   'no-mixed-spaces-and-tabs': 2,
@@ -246,9 +239,9 @@ module.exports = {
         BinaryExpression: false,
         ImportDeclaration: true,
         Property: true,
-        VariableDeclarator: false,
+        VariableDeclarator: false
       },
-      ignoreEOLComments: true,
+      ignoreEOLComments: true
     }
   ],
   'no-multi-str': 2,
@@ -260,15 +253,12 @@ module.exports = {
   'no-new': 2,
   'no-new-func': 2,
   'no-new-object': 2,
-  'no-new-require': 2,
   'no-new-symbol': 2,
   'no-new-wrappers': 2,
   'no-obj-calls': 2,
   'no-octal': 2,
   'no-octal-escape': 2,
-  'no-path-concat': 2,
   'no-plusplus': 0,
-  'no-process-exit': 2,
   'no-proto': 2,
   'no-prototype-builtins': 2,
   'no-redeclare': 2,
@@ -304,14 +294,14 @@ module.exports = {
     2, {
       args: 'none',
       ignoreRestSiblings: true,
-      vars: 'all',
+      vars: 'all'
     }
   ],
   'no-use-before-define': [
     2, {
       classes: false,
       functions: false,
-      variables: false,
+      variables: false
     }
   ],
   'no-useless-call': 2,
@@ -340,8 +330,8 @@ module.exports = {
     {
       overrides: {
         ':': 'before',
-        '?': 'before',
-      },
+        '?': 'before'
+      }
     }
   ],
   'padded-blocks': [
@@ -352,12 +342,12 @@ module.exports = {
     2, {
       blankLine: 'always',
       next: '*',
-      prev: 'multiline-expression',
+      prev: 'multiline-expression'
     },
     {
       blankLine: 'always',
       next: 'multiline-expression',
-      prev: '*',
+      prev: '*'
     }
   ],
   'prefer-arrow-callback': 2,
@@ -374,7 +364,7 @@ module.exports = {
   'semi-spacing': [
     2, {
       after: true,
-      before: false,
+      before: false
     }
   ],
   'sort-vars': [2, { ignoreCase: true }],
@@ -385,7 +375,7 @@ module.exports = {
   'space-unary-ops': [
     2, {
       nonwords: false,
-      words: true,
+      words: true
     }
   ],
   'spaced-comment': [
@@ -397,15 +387,15 @@ module.exports = {
           '*',
           '-',
           '+',
-          '=',
+          '='
         ],
         markers: [
           '*package',
           '!',
           ',',
           ':',
-          '::',
-        ],
+          '::'
+        ]
       },
       line: {
         markers: [
@@ -413,9 +403,9 @@ module.exports = {
           '!',
           '/',
           ',',
-          '=',
-        ],
-      },
+          '='
+        ]
+      }
     }
   ],
   strict: [2, 'global'],
@@ -433,5 +423,5 @@ module.exports = {
   ],
   'wrap-regex': 0,
   'yield-star-spacing': [2, 'both'],
-  yoda: [2, 'never'],
+  yoda: [2, 'never']
 }

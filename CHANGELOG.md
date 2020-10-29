@@ -1,5 +1,47 @@
 # Changelog for `eslint-config-breki`
 
+## v1.0.30 - October 28, 2020
+
+- **Config Changes**: Upgraded `ecmaVersion` from `2017` to `2020` in Parser Options.
+- **Rule Changes**: Updated ruleset for `eslint-plugin-jest` as these had changed slightly between `v22.16` and `v24.1`.
+- **Rule Changes**: Upgraded `array-func/from-map` and `array-func/prefer-array-from` from warning to error.
+- **Rule Changes**: Downgraded `accessor-pairs` from error to warning.
+- **Rule Changes**: Added new rule for `array-callback-return` (error).
+- **Rule Changes**: Added new rule for `func-names`, including ruleset for generators (error).
+- **Rule Changes**: Reworked ruleset for `eslint-plugin-import`, removing overlaps with `eslint-plugin-node` and
+  changing some errors to warnings.
+- **Rule Changes**: Added new rules from `eslint-plugin-unicorn` and removed deprecated ones.
+- **Rule Changes**: Reworked ruleset for `eslint-plugin-node`, making it more strict on potential sources of errors.
+- **Rule Changes**: Changed `no-extra-parens`, changing option `conditionalAssign` to `true`, and added new options
+  `enforceForSequenceExpressions`, `enforceForNewInMemberExpressions`, and `enforceForFunctionPrototypeExpressions`,
+  all `true`
+- **Rule Changes**: Added options `ignoreDefaultValues`, `enforceConst`, and `detectObjects` to `no-magic-numbers`, all
+  `true`.
+- **Code Style**: Moved some more scaffolding down into the root folder's `index.js`.
+- **Building and Testing**: In `.travis.yml`, removed support for specific node versions, replaced with testing against
+  "Latest Stable" and "Latest LTS" only.
+- **Code Style**: Renamed file and variable "env" to "environment" where applicable.
+- **Dependencies**: Removed `eslint-plugin-es`, as we are bumping `ecmaVersion` to 2020 anyway.
+- **Dependencies**: Upgraded multiple dependency versions:
+  - `babel-eslint`: ^10.1.0
+  - `eslint`: ^7.12.1
+  - `eslint-plugin-array-func`: ^3.1.7
+  - `eslint-plugin-babel`: ^5.3.1
+  - `eslint-plugin-filenames`: ^1.3.2
+  - `eslint-plugin-import`: ^2.22.1
+  - `eslint-plugin-jest`: ^24.1.0
+  - `eslint-plugin-json`: ^2.1.2
+  - `eslint-plugin-node`: ^11.1.0
+  - `eslint-plugin-ocd`: ^1.1.0
+  - `eslint-plugin-promise`: ^4.2.1
+  - `eslint-plugin-security`: ^1.4.0
+  - `eslint-plugin-unicorn`: ^23.0.0
+  - `eslint-plugin-you-dont-need-lodash-underscore`: ^6.10.0
+  - `eslint-plugin-you-dont-need-momentjs`: ^1.6.0
+  - `import-modules`: ^2.0.0
+  - `semantic-release`: ^17.2.1
+  - `vue-eslint-parser`: ^7.1.1
+
 ## v1.0.29 - September 2, 2019
 
 - **Rule Changes**: Rule no longer enforces `lf` linebreaks over `crlf`, but ignores linebreaks completely.
@@ -36,8 +78,10 @@
 - **Dependencies**: Removed `eslint-plugin-vue` & associated rules.
 - **Dependencies**: Removed `eslint-plugin-html` & associated rules.
 - **BugFix**: Fixed faulty rule implementations for `eslint-plugin-flowtype`.
-- **Rule Changes**: `eslint-plugin-node` no longer looks at `.mjs` files in `no-unpublished-import` and `no-unpublished-require`.
-- **Rule Changes**: Added missing rules for `eslint-plugin-you-dont-need-lodash-underscore` and `eslint-plugin-you-dont-need-momentjs`.
+- **Rule Changes**: `eslint-plugin-node` no longer looks at `.mjs` files in `no-unpublished-import` and
+  `no-unpublished-require`.
+- **Rule Changes**: Added missing rules for `eslint-plugin-you-dont-need-lodash-underscore` and
+  `eslint-plugin-you-dont-need-momentjs`.
 - **Rule Changes**: Dropped `ecmaVersion` to 2017 rather than 2019.
 
 ## v1.0.24 - June 27, 2019
@@ -59,13 +103,13 @@
 
 ## v1.0.23 - June 27, 2019
 
-- **CodeStyle**: Updated Eslint calls from 'warn' and 'warning' to `1` and 'error' to `2` to guarantee future compatibility.
-
+- **Code Style**: Updated Eslint calls from 'warn' and 'warning' to `1` to guarantee future compatibility.
+- **Code Style**: Updated Eslint calls from 'error' to `2` to guarantee future compatibility.
 
 ## v1.0.22 - January 26, 2019
 
 - **BugFix**: Internal Eslint extension now correctly points to `./index.js`.
-- **CodeStyle**: Moved output builders from `./src/output` to `./src`.
+- **Code Style**: Moved output builders from `./src/output` to `./src`.
 - **Dependencies**: Removed `standard` and `eslint-config-standard`.
 - **Dependencies**: Added `babel-eslint`, v10.0.1.
 - **Dependencies**: Added `semantic-release`, v15.13.3
@@ -74,11 +118,12 @@
 
 - **Enhancement**: Introduced eslint-plugin-flowtype to the mix.
 - **Performance**: Cut down on the various extraneous modules being used in the repo.
-- **CodeStyle**: Gave up on the idea of using Typescript, it felt like too much work for far too little effort. (... node_modules before: 154mb. node_modules after: 67mb)
+- **Code Style**: Gave up on the idea of using Typescript, it felt like too much work without any real gain.
 
 ## v1.0.20 - January 8, 2019
 
-- **CodeStyle**: Began migration of project into Typescript. Planning a more modular approach to how the various rules are loaded/imported.
+- **Code Style**: Began migration of project into Typescript. Planning a more modular approach to how the various rules
+  are loaded/imported.
 
 ## v1.0.10 - November 22, 2018
 
@@ -92,10 +137,10 @@
 
 ## v1.0.9 - November 22, 2018
 
-- **CodeStyle**: Changed line length in `README.md` from 120 to 80.
-- **CodeStyle**: Created this changelog in the first place.
-- **CodeStyle**: Renamed configuration file from `.eslint.json` to `eslint.json`
-- **CodeStyle**: Updated package.json to reflect change from React to Vue.
+- **Code Style**: Changed line length in `README.md` from 120 to 80.
+- **Code Style**: Created this changelog in the first place.
+- **Code Style**: Renamed configuration file from `.eslint.json` to `eslint.json`
+- **Code Style**: Updated package.json to reflect change from React to Vue.
 - **Dependencies**: Added `@vue/eslint-plugin`
 - **Dependencies**: Moved eslint from devDependencies to peerDependencies.
 - **Dependencies**: Removed `eslint-plugin-react` in favor of `Vue`.

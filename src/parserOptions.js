@@ -1,6 +1,7 @@
 module.exports = {
   parser: 'babel-eslint',
-  ecmaVersion: 2017,
+  allowImportExportEverywhere: true,
+  ecmaVersion: 2020,
   sourceType: 'module',
   ecmaFeatures: {
     arrowFunctions: true,
@@ -18,7 +19,7 @@ module.exports = {
     objectLiteralDuplicateProperties: true,
     objectLiteralShorthandMethods: true,
     objectLiteralShorthandProperties: true,
-    octalLiterls: true,
+    octalLiterals: true,
     regexUFlag: true,
     regexYFlag: true,
     spread: true,
