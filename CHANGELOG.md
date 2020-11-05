@@ -2,228 +2,36 @@
 
 ## v1.0.32 - November 5, 2020
 
-- **
-  Dependencies**:
-  Removed `eslint-plugin-ocd`
-  as
-  it
-  is
-  no
-  longer
-  being
-  maintained
-  &
-  had
-  many
-  deprecated
-  dependencies.
+- **Dependencies**: Removed `eslint-plugin-ocd` as it is no longer being maintained & had many deprecated dependencies.
 
 ## v1.0.31 - November 5, 2020
 
-- **
-  Rule
-  Changes**:
-  Removed `unicorn/prefer-spread`
-  as
-  it
-  conflicted
-  with `array-func/prefer-array-from`
-  .
-- **
-  Rule
-  changes**:
-  Updated `no-extra-parens`
-  to
-  simply
-  warn
-  on `all`
-  instead
-  of
-  specifying
-  the
-  list.
+- **Rule Changes**: Removed `unicorn/prefer-spread` as it conflicted with `array-func/prefer-array-from`.
+- **Rule changes**: Updated `no-extra-parens` to simply warn on `all` instead of specifying the list.
 
 ## v1.0.30 - November 5, 2020
 
-- **
-  Config
-  Changes**:
-  Added
-  support
-  for
-  GitHub
-  Packages
+- **Config Changes**: Added support for GitHub Packages
 
 ## v1.0.30 - October 28, 2020
 
-- **
-  Config
-  Changes**:
-  Upgraded `ecmaVersion`
-  from `2017`
-  to `2020`
-  in
-  Parser
-  Options.
-- **
-  Rule
-  Changes**:
-  Updated
-  ruleset
-  for `eslint-plugin-jest`
-  as
-  these
-  had
-  changed
-  slightly
-  between `v22.16`
-  and `v24.1`
-  .
-- **
-  Rule
-  Changes**:
-  Upgraded `array-func/from-map`
-  and `array-func/prefer-array-from`
-  from
-  warning
-  to
-  error.
-- **
-  Rule
-  Changes**:
-  Downgraded `accessor-pairs`
-  from
-  error
-  to
-  warning.
-- **
-  Rule
-  Changes**:
-  Added
-  new
-  rule
-  for `array-callback-return` (
-  error)
-  .
-- **
-  Rule
-  Changes**:
-  Added
-  new
-  rule
-  for `func-names`
-  ,
-  including
-  ruleset
-  for
-  generators (
-  error)
-  .
-- **
-  Rule
-  Changes**:
-  Reworked
-  ruleset
-  for `eslint-plugin-import`
-  ,
-  removing
-  overlaps
-  with `eslint-plugin-node`
-  and
-  changing
-  some
-  errors
-  to
-  warnings.
-- **
-  Rule
-  Changes**:
-  Added
-  new
-  rules
-  from `eslint-plugin-unicorn`
-  and
-  removed
-  deprecated
-  ones.
-- **
-  Rule
-  Changes**:
-  Reworked
-  ruleset
-  for `eslint-plugin-node`
-  ,
-  making
-  it
-  more
-  strict
-  on
-  potential
-  sources
-  of
-  errors.
-- **
-  Rule
-  Changes**:
-  Changed `no-extra-parens`
-  ,
-  changing
-  option `conditionalAssign`
-  to `true`
-  ,
-  and
-  added
-  new
-  options
-  `enforceForSequenceExpressions`
-  , `enforceForNewInMemberExpressions`
-  ,
-  and `enforceForFunctionPrototypeMethods`
-  ,
-  all
-  `true`
-  .
-- **
-  Rule
-  Changes**:
-  Added
-  options `ignoreDefaultValues`
-  , `enforceConst`
-  ,
-  and `detectObjects`
-  to `no-magic-numbers`
-  ,
-  all `true`
-  .
-- **
-  Code
-  Style**:
-  Moved
-  some
-  more
-  scaffolding
-  down
-  into
-  the
-  root
-  folder's `index.js`
-  .
-- **
-  Building
-  and
-  Testing**:
-  In `.travis.yml`
-  ,
-  removed
-  support
-  for
-  specific
-  node
-  versions,
-  replaced
-  with
-  testing
-  against
+- **Config Changes**: Upgraded `ecmaVersion` from `2017` to `2020` in Parser Options.
+- **Rule Changes**: Updated ruleset for `eslint-plugin-jest` as these had changed slightly between `v22.16` and `v24.1`.
+- **Rule Changes**: Upgraded `array-func/from-map` and `array-func/prefer-array-from` from warning to error.
+- **Rule Changes**: Downgraded `accessor-pairs` from error to warning.
+- **Rule Changes**: Added new rule for `array-callback-return` (error) .
+- **Rule Changes**: Added new rule for `func-names` , including ruleset for generators (error) .
+- **Rule Changes**: Reworked ruleset for `eslint-plugin-import` , removing overlaps with `eslint-plugin-node` and
+  changing some errors to warnings.
+- **Rule Changes**: Added new rules from `eslint-plugin-unicorn` and removed deprecated ones.
+- **Rule Changes**: Reworked ruleset for `eslint-plugin-node`, making it more strict on potential sources of errors.
+- **Rule Changes**: Changed `no-extra-parens`, changing option `conditionalAssign` to `true`, and added new options
+  `enforceForSequenceExpressions`, `enforceForNewInMemberExpressions`, and `enforceForFunctionPrototypeMethods`, all
+  `true`.
+- **Rule Changes**: Added options `ignoreDefaultValues`, `enforceConst`, and `detectObjects` to `no-magic-numbers`,
+  all `true`.
+- **Code Style**: Moved some more scaffolding down into the root folder's `index.js`.
+- **Building and Testing**: In `.travis.yml`, removed support for specific node versions, replaced with testing against
   "Latest Stable" and "Latest LTS" only.
 - **Code Style**: Renamed file and variable "env" to "environment" where applicable.
 - **Dependencies**: Removed `eslint-plugin-es`, as we are bumping `ecmaVersion` to 2020 anyway.
