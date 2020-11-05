@@ -1,7 +1,6 @@
 module.exports = [
   'array-func',
   'babel',
-  'es',
   'filenames',
   'import',
   'jest',

@@ -1,3 +1,0 @@
-module.expoprts = {
-  // TO DO
-}
