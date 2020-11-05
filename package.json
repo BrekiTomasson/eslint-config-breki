@@ -40,6 +40,9 @@
   ],
   "license": "MIT",
   "name": "eslint-config-breki",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/BrekiTomasson/breki-eslint-config.git"
