@@ -169,20 +169,7 @@ module.exports = {
   'no-extra-bind': 2,
   'no-extra-boolean-cast': 2,
   'no-extra-label': 2,
-  'no-extra-parens': [
-    1,
-    'all',
-    {
-      conditionalAssign: true,
-      returnAssign: true,
-      nestedBinaryExpressions: true,
-      ignoreJSX: 'multi-line',
-      enforceForArrowConditionals: true,
-      enforceForSequenceExpressions: true,
-      enforceForNewInMemberExpressions: true,
-      enforceForFunctionPrototypeMethods: true
-    }
-  ],
+  'no-extra-parens': [1, 'all'],
   'no-extra-semi': 2,
   'no-fallthrough': 2,
   'no-floating-decimal': 2,

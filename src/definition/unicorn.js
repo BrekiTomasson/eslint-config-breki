@@ -36,7 +36,6 @@ module.exports = {
   'unicorn/prefer-node-remove': 1,
   'unicorn/prefer-query-selector': 1,
   'unicorn/prefer-reflect-apply': 1,
-  'unicorn/prefer-spread': 1,
   'unicorn/prefer-starts-ends-with': 1,
   'unicorn/prefer-string-slice': 1,
   'unicorn/prefer-ternary': 1,

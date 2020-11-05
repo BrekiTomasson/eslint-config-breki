@@ -4,7 +4,6 @@ notifications:
   email: true
 
 node_js:
-  - node
   - lts/*
 
 jobs:
