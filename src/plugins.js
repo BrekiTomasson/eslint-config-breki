@@ -6,7 +6,6 @@ module.exports = [
   'jest',
   'json',
   'node',
-  'ocd',
   'promise',
   'security',
   'unicorn',
