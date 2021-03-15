@@ -1,3 +1,20 @@
-/* This file still needs the various JSON rules added. */
-
-module.exports = {}
+module.exports = {
+  'json/colon-expected': 'warn',
+  'json/comma-expected': 'warn',
+  'json/comma-or-close-backet-expected': 'warn',
+  'json/comma-or-close-brace-expected': 'warn',
+  'json/comment-not-permitted': 'warn',
+  'json/duplicate-key': 'warn',
+  'json/enum-value-mismatch': 'warn',
+  'json/invalid-character': 'warn',
+  'json/invalid-escape-character': 'warn',
+  'json/invalid-unicode': 'warn',
+  'json/property-expected': 'warn',
+  'json/schema-resolve-error': 'warn',
+  'json/trailing-comma': 'warn',
+  'json/undefined': 'warn',
+  'json/unexpected-end-of-comment': 'warn',
+  'json/unexpected-end-of-number': 'warn',
+  'json/unexpected-end-of-string': 'warn',
+  'json/value-expected': 'warn',
+}

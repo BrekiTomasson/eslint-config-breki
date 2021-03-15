@@ -1,14 +1,14 @@
 module.exports = {
-  'security/detect-unsafe-regex': 1,
-  'security/detect-buffer-noassert': 1,
-  'security/detect-child-process': 1,
-  'security/detect-disable-mustache-escape': 1,
-  'security/detect-eval-with-expression': 1,
-  'security/detect-no-csrf-before-method-override': 1,
-  'security/detect-non-literal-fs-filename': 1,
-  'security/detect-non-literal-regexp': 1,
-  'security/detect-non-literal-require': 1,
-  'security/detect-object-injection': 1,
-  'security/detect-possible-timing-attacks': 1,
-  'security/detect-pseudoRandomBytes': 1
+  'security/detect-buffer-noassert': 'warn',
+  'security/detect-child-process': 'warn',
+  'security/detect-disable-mustache-escape': 'warn',
+  'security/detect-eval-with-expression': 'warn',
+  'security/detect-no-csrf-before-method-override': 'warn',
+  'security/detect-non-literal-fs-filename': 'warn',
+  'security/detect-non-literal-regexp': 'warn',
+  'security/detect-non-literal-require': 'warn',
+  'security/detect-object-injection': 'warn',
+  'security/detect-possible-timing-attacks': 'warn',
+  'security/detect-pseudoRandomBytes': 'warn',
+  'security/detect-unsafe-regex': 'warn'
 }

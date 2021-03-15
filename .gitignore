@@ -13,4 +13,5 @@ test/tmp/**/*
 
 ### And ignore things that should be rebuilt. #############
 package-lock.json
+yarn.lock
 node_modules

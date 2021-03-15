@@ -1,10 +1,8 @@
 const ECMAVERSION = 2020
 
 module.exports = {
-  parser: 'babel-eslint',
-  allowImportExportEverywhere: true,
-  ecmaVersion: ECMAVERSION,
-  sourceType: 'module',
+  allowImportExportEverywhere: false,
+  babelOptions: { configFile: `${__dirname}/../babel.config.js` },
   ecmaFeatures: {
     arrowFunctions: true,
     binaryLiterals: true,
@@ -28,5 +26,7 @@ module.exports = {
     superInFunctions: true,
     templateStrings: true,
     unicodeCodePointEscapes: true
-  }
+  },
+  ecmaVersion: ECMAVERSION,
+  sourceType: 'module',
 }

@@ -1,13 +1,13 @@
 module.exports = {
+  __: 'readable',
   __DEV__: 'readable',
   __SERVER__: 'readable',
-  __: 'readable',
   define: 'readable',
   describe: 'readable',
+  document: 'writable',
   expect: 'readable',
+  navigator: 'readable',
   require: 'readable',
   test: 'readable',
-  document: 'writable',
-  navigator: 'readable',
   window: 'writable'
 }

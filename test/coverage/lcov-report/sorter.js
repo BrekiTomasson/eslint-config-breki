@@ -38,10 +38,10 @@ const addSorting = (function () {
     let col
 
 
-    let i
+    let index
 
-    for (i = 0; i < colNodes.length; i += 1) {
-      colNode = colNodes[i]
+    for (index = 0; index < colNodes.length; index += 1) {
+      colNode = colNodes[index]
 
       col = {
         key: colNode.getAttribute('data-col'),
@@ -74,18 +74,18 @@ const addSorting = (function () {
     const data = {}
 
 
-    let i
+    let index
 
 
-    let val
-    for (i = 0; i < tableCols.length; i += 1) {
-      colNode = tableCols[i]
-      col = cols[i]
-      val = colNode.getAttribute('data-value')
+    let value
+    for (index = 0; index < tableCols.length; index += 1) {
+      colNode = tableCols[index]
+      col = cols[index]
+      value = colNode.getAttribute('data-value')
       if (col.type === 'number') {
-        val = Number(val)
+        value = Number(value)
       }
-      data[col.key] = val
+      data[col.key] = value
     }
     return data
   }
@@ -96,10 +96,10 @@ const addSorting = (function () {
     const rows = getTableBody().querySelectorAll('tr')
 
 
-    let i
+    let index
 
-    for (i = 0; i < rows.length; i += 1) {
-      rows[i].data = loadRowData(rows[i])
+    for (index = 0; index < rows.length; index += 1) {
+      rows[index].data = loadRowData(rows[index])
     }
   }
 
@@ -128,7 +128,7 @@ const addSorting = (function () {
     const rows = []
 
 
-    let i
+    let index_
 
     if (desc) {
       finalSorter = function (a, b) {
@@ -136,15 +136,15 @@ const addSorting = (function () {
       }
     }
 
-    for (i = 0; i < rowNodes.length; i += 1) {
-      rows.push(rowNodes[i])
-      tableBody.removeChild(rowNodes[i])
+    for (index_ = 0; index_ < rowNodes.length; index_ += 1) {
+      rows.push(rowNodes[index_])
+      rowNodes[index_].remove()
     }
 
     rows.sort(finalSorter)
 
-    for (i = 0; i < rows.length; i += 1) {
-      tableBody.appendChild(rows[i])
+    for (index_ = 0; index_ < rows.length; index_ += 1) {
+      tableBody.append(rows[index_])
     }
   }
 
@@ -169,38 +169,38 @@ const addSorting = (function () {
   // adds event listeners for all sorter widgets
 
   function enableUI () {
-    let i
+    let index
 
 
-    let el
+    let element
 
 
-    const ithSorter = function ithSorter (i) {
-      const col = cols[i]
+    const ithSorter = function ithSorter (index_) {
+      const col = cols[index_]
 
       return function () {
         let desc = col.defaultDescSort
 
-        if (currentSort.index === i) {
+        if (currentSort.index === index_) {
           desc = !currentSort.desc
         }
-        sortByIndex(i, desc)
+        sortByIndex(index_, desc)
         removeSortIndicators()
-        currentSort.index = i
+        currentSort.index = index_
         currentSort.desc = desc
         addSortIndicators()
       }
     }
-    for (i = 0; i < cols.length; i += 1) {
-      if (cols[i].sortable) {
+    for (index = 0; index < cols.length; index += 1) {
+      if (cols[index].sortable) {
         // add the click event handler on the th so users
         // dont have to click on those tiny arrows
 
-        el = getNthColumn(i).querySelector('.sorter').parentElement
-        if (el.addEventListener) {
-          el.addEventListener('click', ithSorter(i))
+        element = getNthColumn(index).querySelector('.sorter').parentElement
+        if (element.addEventListener) {
+          element.addEventListener('click', ithSorter(index))
         } else {
-          el.attachEvent('onclick', ithSorter(i))
+          element.attachEvent('onclick', ithSorter(index))
         }
       }
     }

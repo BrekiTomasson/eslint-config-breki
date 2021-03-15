@@ -1,5 +1,21 @@
 # Changelog for `eslint-config-breki`
 
+## v1.0.33 - March 15th, 2021.
+
+- **Dependencies**: Added `eslint-plugin-html`.
+- **Dependencies**: Added `is-installed` to build support for only including certain eslint plugins when another module is detected.
+- **Dependencies**: Removed `eslint-plugin-array-func` as most of its rules are covered by `eslint-plugin-unicorn`.
+- **Dependencies**: Removed `eslint-plugin-filenames` as most of its rules are covered by `eslint-plugin-unicorn`.
+- **Dependencies**: Removed `vue-eslint-parser`.
+- **Dependencies**: Replaced `babel-eslint` with `@babel/eslint-parser`.
+- **Dependencies**: Updated multiple dependencies to their latest versions. Several `unicorn` rules were updated due to deprecation etc.
+- **Rule Changes**: Added the various rules for `eslint-plugin-json`.
+- **Rule Changes**: Removed `node/file-extension-in-import` as it disallowed the standard practice of loading a directory to get its `index.js`.
+- **Rule Changes**: `eslint/no-nested-ternary` disabled in favor of `unicorn/no-nested-ternary`.
+- **Rule Changes**: `eslint/no-process-exit` disabled in favor of `unicorn/no-process-exit`.
+- **Rule Changes**: `eslint/no-warning-comments` disabled in favor of `unicorn/expiring-todo-comments`.
+- **Rule Changes**: `eslint/sort-keys` added.
+
 ## v1.0.32 - November 5, 2020
 
 - **Dependencies**: Removed `eslint-plugin-ocd` as it is no longer being maintained & had many deprecated dependencies.
@@ -116,7 +132,7 @@
 
 ## v1.0.23 - June 27, 2019
 
-- **Code Style**: Updated Eslint calls from 'warn' and 'warning' to `1` to guarantee future compatibility.
+- **Code Style**: Updated Eslint calls from 1 and 'warning' to `1` to guarantee future compatibility.
 - **Code Style**: Updated Eslint calls from 'error' to `2` to guarantee future compatibility.
 
 ## v1.0.22 - January 26, 2019

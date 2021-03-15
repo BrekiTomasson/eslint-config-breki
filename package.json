@@ -8,23 +8,22 @@
     "url": "https://github.com/BrekiTomasson/eslint-config-breki/issues"
   },
   "dependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.12.1",
-    "eslint-plugin-array-func": "^3.1.7",
+    "@babel/eslint-parser": "^7.13.10",
+    "eslint": "^7.22.0",
     "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-jest": "^24.3.1",
     "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^23.0.0",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
+    "eslint-plugin-unicorn": "^28.0.2",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.11.0",
     "eslint-plugin-you-dont-need-momentjs": "^1.6.0",
     "import-modules": "^2.0.0",
-    "semantic-release": "^17.2.1",
-    "vue-eslint-parser": "^7.1.1"
+    "is-installed": "^2.0.1",
+    "semantic-release": "^17.2.1"
   },
   "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
   "devDependencies": {

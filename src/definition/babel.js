@@ -1,10 +1,21 @@
 module.exports = {
-  'babel/new-cap': 1,
-  'babel/camelcase': 1,
-  'babel/no-invalid-this': 1,
-  'babel/object-curly-spacing': [2, 'always'],
-  'babel/quotes': [1, 'single', { allowTemplateLiterals: true, avoidEscape: true }],
-  'babel/semi': [2, 'never'],
-  'babel/no-unused-expressions': [2, { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
-  'babel/valid-typeof': 2
+  'babel/camelcase': 'warn',
+  'babel/new-cap': 'warn',
+  'babel/no-invalid-this': 'warn',
+  'babel/no-unused-expressions': [
+    'error', {
+      allowShortCircuit: true,
+      allowTaggedTemplates: true,
+      allowTernary: true
+    }
+  ],
+  'babel/object-curly-spacing': ['error', 'always'],
+  'babel/quotes': [
+    'warn', 'single', {
+      allowTemplateLiterals: true,
+      avoidEscape: true
+    }
+  ],
+  'babel/semi': ['error', 'never'],
+  'babel/valid-typeof': 'error'
 }

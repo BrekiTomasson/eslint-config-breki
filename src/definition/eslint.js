@@ -5,9 +5,9 @@ const CHAINDEPTHTOIGNORE = 4
 
 module.exports = {
   'accessor-pairs': 1,
-  'array-callback-return': 2,
   'array-bracket-newline': [2, { multiline: true }],
   'array-bracket-spacing': [2, 'never'],
+  'array-callback-return': 2,
   'arrow-body-style': [2, 'as-needed'],
   'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
   'arrow-spacing': [
@@ -191,11 +191,11 @@ module.exports = {
   'no-magic-numbers': [
     2,
     {
+      detectObjects: true,
+      enforceConst: true,
       ignore: [-1, 0, 1, 2],
       ignoreArrayIndexes: true,
-      ignoreDefaultValues: true,
-      enforceConst: true,
-      detectObjects: true
+      ignoreDefaultValues: true
     }
   ],
   'no-mixed-operators': [
@@ -241,7 +241,7 @@ module.exports = {
   'no-native-reassign': 2,
   'no-negated-condition': 2,
   'no-negated-in-lhs': 2,
-  'no-nested-ternary': 2,
+  'no-nested-ternary': 0,
   'no-new': 2,
   'no-new-func': 2,
   'no-new-object': 2,
@@ -251,6 +251,7 @@ module.exports = {
   'no-octal': 2,
   'no-octal-escape': 2,
   'no-plusplus': 0,
+  'no-process-exit': 0,
   'no-proto': 2,
   'no-prototype-builtins': 2,
   'no-redeclare': 2,
@@ -304,7 +305,7 @@ module.exports = {
   'no-useless-return': 2,
   'no-var': 2,
   'no-void': 2,
-  'no-warning-comments': 2,
+  'no-warning-comments': 0,
   'no-whitespace-before-property': 2,
   'no-with': 2,
   'nonblock-statement-body-position': [2, 'beside'],
@@ -357,6 +358,13 @@ module.exports = {
     2, {
       after: true,
       before: false
+    }
+  ],
+  'sort-keys': [
+    2, 'asc', {
+      caseSensitive: true,
+      minKeys: 2,
+      natural: true
     }
   ],
   'sort-vars': [2, { ignoreCase: true }],
