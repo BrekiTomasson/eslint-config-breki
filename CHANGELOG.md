@@ -1,6 +1,6 @@
 # Changelog for `eslint-config-breki`
 
-## v1.0.33 - March 15th, 2021.
+## v1.0.37 - March 15th, 2021.
 
 - **Dependencies**: Added `eslint-plugin-html`.
 - **Dependencies**: Added `is-installed` to build support for only including certain eslint plugins when another module is detected.
