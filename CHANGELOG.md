@@ -1,5 +1,11 @@
 # Changelog for `eslint-config-breki`
 
+## v1.0.38 - March 4th, 2022.
+
+- **Dependencies**: Upgraded versions of most eslint plugins.
+- **Dependencies**: Removed `jest` eslint plugin as including it was too limiting.
+- **Dependencies**: Removed `you-dont-need-momentjs` eslint plugin as it seems to no longer be updated.
+
 ## v1.0.37 - March 15th, 2021.
 
 - **Dependencies**: Added `eslint-plugin-html`.

@@ -2,32 +2,29 @@
   "author": {
     "email": "breki.tomasson@gmail.com",
     "name": "Breki Tomasson",
-    "url": "http://brekitomasson.com"
+    "url": "https://brekitomasson.com"
   },
   "bugs": {
     "url": "https://github.com/BrekiTomasson/eslint-config-breki/issues"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.13.10",
-    "eslint": "^7.22.0",
+    "@babel/eslint-parser": "^7.17.0",
+    "eslint": "^8.10.0",
     "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-html": "^6.1.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.3.1",
-    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^28.0.2",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.11.0",
-    "eslint-plugin-you-dont-need-momentjs": "^1.6.0",
-    "import-modules": "^2.0.0",
+    "eslint-plugin-unicorn": "^41.0.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
+    "import-modules": "^2.1.0",
     "is-installed": "^2.0.1",
-    "semantic-release": "^17.2.1"
+    "semantic-release": "^19.0.2"
   },
   "description": "A handful of rules used by Breki Tomasson for formatting, error-checking and practicing Safe Hex.",
   "devDependencies": {
-    "jest": "^26.6.1",
     "travis-deploy-once": "^5.0.11"
   },
   "homepage": "https://github.com/BrekiTomasson/eslint-config-breki#readme",
