@@ -44,5 +44,5 @@
     "patch": "npm version patch && npm publish && git push --follow-tags",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "version": "1.0.37"
+  "version": "1.0.38"
 }
